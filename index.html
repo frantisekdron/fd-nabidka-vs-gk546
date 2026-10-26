@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow,noarchive,noimageindex">
+<meta name="referrer" content="no-referrer">
+<title>Nabídka · Byty Borovského a Verde Slaný II · FrantišekDron</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#0e1310;--bg2:#131a15;--panel:#171f19;--line:#2a352c;--ink:#ece9e1;--muted:#a7b0a3;--muted2:#7f897c;--gold:#c4a86a;--gold-soft:#d8c69a;--green:#8CC63F}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:'Inter',-apple-system,Segoe UI,Roboto,sans-serif;font-weight:300;line-height:1.62;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.serif{font-family:'EB Garamond',Georgia,'Times New Roman',serif;font-weight:500;letter-spacing:.01em}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 46px}
+  .eyebrow{font-size:11px;letter-spacing:.30em;text-transform:uppercase;color:var(--gold);font-weight:500;position:relative;padding-left:30px}
+  .eyebrow::before{content:"";position:absolute;left:0;top:.52em;width:20px;height:1px;background:linear-gradient(90deg,var(--gold),transparent)}
+  h2.big{font-size:34px;margin:8px 0 2px;line-height:1.12}
+  h2.big::after{content:"";display:block;width:52px;height:2px;margin:13px 0 2px;border-radius:2px;background:linear-gradient(90deg,var(--gold),rgba(196,168,106,.10))}
+  p{margin:11px 0;color:#cdd3c9;font-size:14.5px}
+  section{padding:44px 0}
+  .pg{min-height:1527px;display:flex;flex-direction:column;position:relative}
+  .pgfoot{margin-top:auto;border-top:1px solid var(--line);padding:10px 0 14px}
+  .pgfoot .wrap{display:flex;justify-content:space-between;align-items:center;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted2)}
+  .pgfoot .n{color:var(--gold);font-weight:600;letter-spacing:.12em}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:5px;overflow:hidden}
+  .grid4>div{background:var(--bg2);padding:17px 17px}
+  .grid4 .v{font-family:'EB Garamond',serif;font-size:25px;color:var(--ink);letter-spacing:-.01em}
+  .grid4 .l{font-size:11.5px;color:var(--muted);margin-top:2px;line-height:1.45}
+
+  .hero{position:relative;height:690px;display:flex;align-items:flex-end;overflow:hidden}
+  .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.94) brightness(.72)}
+  .hero::before{content:"";position:absolute;inset:0;z-index:1;background:radial-gradient(130% 90% at 50% 6%,transparent 40%,rgba(10,14,11,.32))}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,14,11,.60),rgba(10,14,11,.12) 30%,rgba(10,14,11,.96))}
+  .hero .wrap{position:relative;z-index:2;padding-bottom:40px}
+  .hero h1{font-size:56px;line-height:1.04;margin:14px 0 12px;letter-spacing:-.012em;text-shadow:0 2px 30px rgba(0,0,0,.5)}
+  .hero .sub{font-size:16.5px;color:var(--gold-soft);max-width:680px;line-height:1.55}
+  .hero .meta{margin-top:18px;font-size:12px;color:var(--muted);border-top:1px solid rgba(167,176,163,.28);padding-top:12px;display:flex;gap:22px;flex-wrap:wrap}
+
+  .day{display:flex;flex-direction:column;gap:5px;margin-top:18px}
+  .day .row{display:grid;grid-template-columns:118px 1fr;border:1px solid var(--line);border-radius:5px;overflow:hidden;background:var(--panel)}
+  .day .row.hl{border-color:var(--gold);background:linear-gradient(90deg,rgba(196,168,106,.10),var(--panel) 40%)}
+  .day .t{background:#1b231c;color:var(--gold);font-size:12.5px;display:flex;align-items:center;justify-content:center;text-align:center;padding:10px 6px;border-right:1px solid var(--line);font-weight:500;font-variant-numeric:tabular-nums}
+  .day .row.hl .t{background:#26301f;color:var(--gold-soft)}
+  .day .c{padding:10px 18px}
+  .day .c h4{font-size:14.5px;margin:0 0 2px;font-weight:600;font-family:'Inter'}
+  .day .c p{margin:0;font-size:12.8px;color:#b9c1b4;line-height:1.5}
+
+  .poi{border:1px solid var(--line);border-radius:6px;overflow:hidden;margin-top:14px}
+  .poi .it{padding:11px 18px;border-bottom:1px solid var(--line);font-size:13.5px;display:grid;grid-template-columns:210px 1fr;gap:16px;align-items:baseline}
+  .poi .it:last-child{border-bottom:none}
+  .poi .it b{color:#e7e3d8;font-weight:600;font-size:14px}
+  .poi .it b span{display:block;color:var(--gold);font-weight:500;font-size:11.5px;letter-spacing:.05em;margin-top:2px}
+  .poi .it p{margin:0;color:var(--muted);font-size:13px;line-height:1.5}
+  .poi .it .tags{margin-top:6px;display:flex;gap:6px;flex-wrap:wrap}
+  .tag{font-size:10px;letter-spacing:.12em;text-transform:uppercase;border:1px solid #232c24;color:#586153;padding:2px 8px;border-radius:3px;text-decoration:line-through;text-decoration-color:#3a453b}
+  .tag.on{border-color:rgba(196,168,106,.55);background:rgba(196,168,106,.14);color:var(--gold);text-decoration:none;font-weight:600}
+
+  .scn{display:flex;flex-direction:column;margin-top:16px}
+  .scn .row{display:grid;grid-template-columns:96px 1fr;border-bottom:1px solid var(--line);padding:5px 0}
+  .scn .row:last-child{border-bottom:none}
+  .scn .t{color:var(--gold);font-size:12.5px;font-variant-numeric:tabular-nums;padding-top:1px}
+  .scn .c h4{font-size:14.5px;margin:0 0 2px;font-weight:600;font-family:'Inter'}
+  .scn .c p{margin:0;font-size:12.3px;color:var(--muted);line-height:1.44}
+
+  .vo{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:18px}
+  .vo .b{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:14px 18px}
+  .vo .tg{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .vo h4{font-size:18px;margin:5px 0 3px}
+  .vo .note{font-size:11.5px;color:var(--muted2);margin-bottom:10px}
+  .vo .l{font-family:'EB Garamond',Georgia,serif;font-size:16.5px;line-height:1.26;color:var(--gold-soft);padding:3px 0 3px 13px;border-left:1px solid rgba(196,168,106,.4);margin:4px 0}
+
+  .no{background:linear-gradient(180deg,#1b231c,#141b15);border:1px solid var(--line);border-radius:6px;padding:12px 18px;margin-top:12px}
+  .no .h{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:7px}
+  .no p{margin:0;font-size:12.6px;color:var(--muted);line-height:1.5}
+  .no s{color:var(--muted2);text-decoration-color:rgba(196,168,106,.55)}
+
+  .price{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:14px;align-items:start}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:7px;padding:20px 19px;position:relative;overflow:hidden}
+  .card.hl{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold) inset,0 24px 58px -30px rgba(196,168,106,.42);background:linear-gradient(180deg,#1b231c,#141b15)}
+  .card.hl::after{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-soft))}
+  .card .tg{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .card h3{font-size:20px;margin:7px 0 3px;line-height:1.2}
+  .card .desc{font-size:12px;color:var(--muted);line-height:1.48;min-height:40px}
+  .card .amt{font-family:'EB Garamond',serif;font-size:32px;color:var(--ink);margin:10px 0 0;font-variant-numeric:tabular-nums;line-height:1}
+  .card.hl .amt{color:var(--gold-soft)}
+  .card .amt small{font-size:11.5px;color:var(--muted2);font-family:'Inter';display:block;margin-top:5px;letter-spacing:.03em}
+  .card ul{list-style:none;margin:10px 0 0;border-top:1px solid var(--line);padding-top:9px}
+  .card li{font-size:12.2px;color:#c6cdc1;padding:3px 0 3px 17px;position:relative;line-height:1.44}
+  .card li::before{content:"";position:absolute;left:0;top:8px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg)}
+  .card li b{color:#e7e3d8;font-weight:600}
+  .card li.off{color:var(--muted2)}
+  .card li.off::before{border-color:var(--muted2);transform:none;border-radius:50%;width:5px;height:5px}
+
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:20px}
+  .cols h4{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;font-family:'Inter';margin-bottom:9px}
+  ul.tick{list-style:none}
+  ul.tick li{font-size:13.5px;color:#c6cdc1;padding:3px 0 3px 20px;position:relative;line-height:1.5}
+  ul.tick li::before{content:"\2713";position:absolute;left:0;color:var(--green);font-weight:700;font-size:12px}
+  ul.tick.dot li::before{content:"\25B8";color:var(--gold);font-weight:400}
+
+  .strip{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+  .strip figure{border:1px solid var(--line);border-radius:4px;overflow:hidden;background:var(--panel)}
+  .strip img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
+  .strip figcaption{padding:7px 13px;font-size:11.5px;color:var(--muted);line-height:1.4}
+  .strip figcaption b{color:var(--gold);font-weight:600;display:block;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:2px}
+
+  .ask{background:linear-gradient(180deg,#1b231c,#141b15);border:1px solid rgba(196,168,106,.42);border-radius:7px;padding:15px 21px;margin-top:18px}
+  .ask h4{font-size:19px;margin:0 0 4px}
+  .ask p{font-size:12.7px;margin:7px 0;line-height:1.52}
+  .ask ul{list-style:none;margin:10px 0 0}
+  .ask li{font-size:13px;color:#c6cdc1;padding:3px 0 3px 20px;position:relative;line-height:1.5}
+  .ask li::before{content:"\25B8";position:absolute;left:0;color:var(--gold)}
+
+  .fine{font-size:11.2px;color:var(--muted2);line-height:1.54;margin-top:10px;border-top:1px solid var(--line);padding-top:10px}
+  .fine b{color:var(--muted);font-weight:600}
+
+  footer{border-top:1px solid var(--line);padding:22px 0 26px;background:var(--bg2)}
+  .sign{display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap;align-items:flex-end;margin-top:14px}
+  .sign .b{font-family:'EB Garamond',serif;font-size:26px}
+  .sign .s{font-size:13px;color:var(--muted);line-height:1.7}
+  .kvr{color:var(--gold)}
+  a{color:var(--gold-soft)}
+
+  .lockup{display:inline-flex;align-items:center;gap:11px}
+  .lockup .glyph{width:42px;height:42px;flex:none;color:#fff}
+  .lockup .wstack{display:flex;flex-direction:column;line-height:.84;font-family:'Poppins',system-ui,sans-serif}
+  .lockup .wtop{font-weight:700;font-size:11px;letter-spacing:.17em;color:#fff}
+  .lockup .wbot{font-weight:800;font-size:21.5px;letter-spacing:.02em;color:#8CC63F}
+  .hero .lockup{margin-bottom:16px}
+  footer .lockup{margin-bottom:6px}
+
+  #dlpdf{position:fixed;right:22px;bottom:22px;z-index:99;background:linear-gradient(180deg,#c9ad6e,#a8894b);color:#14180f;border:none;border-radius:40px;padding:13px 22px;font-family:'Inter',sans-serif;font-size:13.5px;font-weight:600;letter-spacing:.02em;cursor:pointer;box-shadow:0 12px 30px -8px rgba(0,0,0,.7)}
+  #dlpdf:hover{filter:brightness(1.08)}
+  @media print{#dlpdf{display:none}}
+  @media(max-width:860px){.wrap{padding:0 22px}.grid2,.cols,.vo,.price,.strip{grid-template-columns:1fr}.grid4{grid-template-columns:1fr 1fr}.hero h1{font-size:36px}.hero{height:auto;min-height:520px}.day .row,.poi .it,.scn .row{grid-template-columns:1fr}.day .t{justify-content:flex-start;padding:8px 18px;border-right:none;border-bottom:1px solid var(--line)}}
+
+  .hero img{filter:saturate(1) brightness(.84)!important}
+  footer{padding:16px 0 18px!important}
+  .card{padding:16px 17px!important}
+  .cols{margin-top:14px!important}
+  .price{margin-top:12px!important}
+  b.em{color:var(--gold-soft);font-weight:500}
+  .gs{color:var(--gold-soft)}
+  ul.tick li b{color:#e7e3d8;font-weight:600}
+  .strip figure.plan{background:#f4f2ee}
+  .strip figure.plan img{object-fit:contain;background:#fff;padding:6px}
+  .need{border:1px solid var(--gold);border-radius:8px;padding:13px 18px 9px;background:linear-gradient(180deg,rgba(196,168,106,.13),rgba(196,168,106,.04));box-shadow:0 0 0 1px rgba(196,168,106,.35) inset,0 18px 44px -26px rgba(196,168,106,.5)}
+  .need h4{font-family:"EB Garamond",Georgia,serif!important;font-size:22px!important;letter-spacing:.01em!important;text-transform:none!important;color:var(--gold-soft)!important;font-weight:500!important;margin:0 0 8px!important}
+  .need ol{list-style:none;counter-reset:n;margin:0}
+  .need li{counter-increment:n;position:relative;padding:3px 0 3px 32px;font-size:13.2px;color:#e7e3d8;line-height:1.45}
+  .need li::before{content:counter(n);position:absolute;left:0;top:3px;width:21px;height:21px;border-radius:50%;background:var(--gold);color:#14180f;font-weight:700;font-size:11.5px;display:flex;align-items:center;justify-content:center}
+  .addon{margin-top:12px;font-size:12.6px;color:var(--muted);border:1px dashed var(--line);border-radius:6px;padding:9px 16px}
+  .addon b{color:#e7e3d8;font-weight:600}
+  .refs{display:grid;grid-template-columns:1.55fr 1fr;gap:16px;margin-top:12px;align-items:stretch}
+  .ref{display:flex;gap:14px;text-decoration:none;color:inherit;background:var(--panel);border:1px solid rgba(196,168,106,.45);border-radius:7px;overflow:hidden;transition:border-color .2s,transform .2s}
+  .ref:hover{border-color:var(--gold);transform:translateY(-1px)}
+  .ref .th{position:relative;display:block;flex:none;background:#000}
+  .ref.wide{flex-direction:column}
+  .ref.wide .th img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+  .ref.tall .th{width:150px}
+  .ref.tall .th img{width:150px;height:100%;min-height:230px;object-fit:cover;object-position:50% 40%;display:block}
+  .ref .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:52px;height:52px;border-radius:50%;background:rgba(14,19,16,.72);border:1px solid var(--gold);color:var(--gold-soft);display:flex;align-items:center;justify-content:center;font-size:19px;padding-left:4px}
+  .ref .cap{display:block;padding:10px 14px 12px;font-size:12.4px;color:var(--muted);line-height:1.45}
+  .ref .cap b{display:block;color:var(--gold-soft);font-family:'EB Garamond',serif;font-size:18px;font-weight:500;margin-bottom:3px}
+  .ref .url{display:block;margin-top:6px;color:var(--gold);font-size:11.5px;letter-spacing:.04em}
+  .card li a{color:var(--gold-soft)}
+  @media(max-width:860px){.refs{grid-template-columns:1fr}.ref.tall .th,.ref.tall .th img{width:110px}}
+</style>
+</head>
+<body>
+<button id="dlpdf">⬇ Stáhnout PDF</button>
+
+<!-- ══════════ STRANA 1 ══════════ -->
+<div class="pg">
+<div class="hero" style="height:600px">
+  <img src="img/p1_hero.jpg" alt="Byty Borovského ve Slaném, září 2026">
+  <div class="wrap">
+    <div class="lockup"><svg class="glyph" viewBox="0 0 64 64"><g stroke="currentColor" stroke-width="5" stroke-linecap="round" fill="none"><line x1="32" y1="32" x2="17" y2="17"/><line x1="32" y1="32" x2="47" y2="17"/><line x1="32" y1="32" x2="17" y2="47"/><line x1="32" y1="32" x2="47" y2="47"/></g><g fill="none" stroke="currentColor" stroke-width="4.5"><circle cx="17" cy="17" r="8.5"/><circle cx="47" cy="17" r="8.5"/><circle cx="17" cy="47" r="8.5"/><circle cx="47" cy="47" r="8.5"/></g><rect x="25.5" y="25.5" width="13" height="13" rx="3.5" fill="currentColor"/></svg><div class="wstack"><span class="wtop">FRANTIŠEK</span><span class="wbot">DRON</span></div></div>
+    <div class="eyebrow">Nabídka dvou videí · Byty Borovského a Verde Slaný II, Slaný</div>
+    <h1>Dvě videa z jednoho dopoledne: obývák až pod střechu a dům, který vyroste ze stavby.</h1>
+    <div class="sub">Ve čtvrtek 29. 10. dopoledne natočíme mezonet v Bytech Borovského a okolí druhé etapy Verde: park, koupaliště, cestu do centra i autobus na Veleslavín. Z jednoho výjezdu vzniknou dva samostatné filmy ve 4K. Videoprohlídka bude platit pro všechny tři zbývající mezonety. Ve filmu o lokalitě vyroste pětipodlažní dům nad dnešní stavbou. Komentář, rozpohybované vizualizace a fotky jsou ve všech třech variantách.</div>
+    <div class="meta"><span>Pro Ing. Petra Hrubého · Absoluta Real / GEPARD REALITY</span><span>26. 10. 2026 · frantisekdron.cz</span></div>
+  </div>
+</div>
+
+<section style="padding-top:26px;padding-bottom:12px"><div class="wrap">
+  <div class="grid4">
+    <div><div class="v">3 × 93 m²</div><div class="l">poslední mezonety 4+kk ve 3. a 4. NP · balkon na jihovýchod · 8 295 000 Kč · předání koncem roku</div></div>
+    <div><div class="v">48 bytů</div><div class="l">druhá etapa Verde · 1+kk až 4+kk · dnes 1. NP z pěti · dokončení 2Q 2028 · prodáno téměř 30 %</div></div>
+    <div><div class="v">35 min</div><div class="l">autobus 388 ze zastávky Slaný, modelářské středisko na Nádraží Veleslavín (metro A) · ve všední ráno zhruba každých 15 minut</div></div>
+    <div><div class="v">1 min</div><div class="l">z druhé etapy do Kumpánovy zahrady a ke koupališti · podle webu projektu s přímým vstupem z areálu</div></div>
+  </div>
+
+  <div class="grid2" style="margin-top:24px">
+    <div>
+      <div class="eyebrow">Jak jsme pochopili zadání</div>
+      <p style="margin-top:12px">Píšeš o dvou videích a každé má jiného kupce. Mezonety mají silnou cenu: 8 295 000 Kč za 93 m², tedy 89 tisíc za metr. Ve druhé etapě stojí metr 111 až 161 tisíc. Za cenu 3+kk o 70 m² ve druhé etapě je tu o 23 metrů víc, pokoj navíc a klíče koncem roku. Z fotek se ale nedá poznat, že <b class="em">obývák je otevřený až pod střechu</b>, ani jak se prázdný byt bez kuchyně dá zařídit. Videoprohlídka proto ukáže výšku a dopolední světlo a ve vizualizacích byt zařídíme.</p>
+      <p>Druhá etapa se zatím prodává z vizualizací a od července je prodáno téměř 30 %. Zbylých 34 bytů se prodává ze stavby, kde je dnes první patro z pěti. Kupec potřebuje vidět to, o čem píšeš: park a koupaliště za domem, centrum pěšky a autobus na Veleslavín. A potřebuje vidět dům. Film proto otevře záběr dnešní stavby, nad kterou <b class="em">dům podle vizualizací architekta patro po patru vyroste</b>, ve skutečném záběru z dronu.</p>
+    </div>
+    <div>
+      <div class="eyebrow">Co je v ceně vždy</div>
+      <ul class="tick" style="margin-top:14px">
+        <li>Natáčení ve čtvrtek dopoledne: mezonet, dron, park, centrum, zastávka. Ve všech variantách stejné</li>
+        <li>Dva samostatné filmy ve 4K s hudbou a gradingem</li>
+        <li><b>Úvodní sekvence filmu o druhé etapě:</b> dům vyroste nad dnešní stavbou podle vizualizací architekta</li>
+        <li>Skutečný výhled z výšky budoucího 5. NP, natočený dronem</li>
+        <li><b>Vizualizace rozpohybované do videa:</b> zařízený mezonet i druhá etapa</li>
+        <li><b>Komentář</b> namluvený profesionálním hlasem a titulky</li>
+        <li><b>Fotky:</b> letecké fotky lokality a stavby, zařízený mezonet z vizualizací do inzerátu</li>
+        <li>Dvě kola korektur, doprava v ceně</li>
+      </ul>
+      <p style="font-size:13px;color:var(--muted);margin-top:10px">Obě videa natočíme za jedno dopoledne. Náhradní termín kvůli počasí neúčtujeme.</p>
+    </div>
+  </div>
+
+  <div class="strip">
+    <figure><img src="img/p1_strip_1.jpg" alt="Obývák mezonetu s krbovými kamny a galerií"><figcaption><b>Obývák až pod střechu</b>Galerie, krbová kamna, vikýře až k podlaze. Fotka výšku neunese, kamera ano.</figcaption></figure>
+    <figure><img src="img/p1_strip_2.jpg" alt="Balkon mezonetu mezi vikýři"><figcaption><b>Balkon do korun</b>Míří na jihovýchod, dopoledne na něj svítí slunce.</figcaption></figure>
+    <figure><img src="img/p1_strip_3.jpg" alt="Stavba druhé etapy z dronu, za ní koupaliště a Slaný" style="object-position:50% 70%"><figcaption><b>Druhá etapa dnes</b>Za stavbou koupaliště a Slaný. Z tohohle pohledu film o druhé etapě začne.</figcaption></figure>
+  </div>
+</div></section>
+  <div class="pgfoot"><div class="wrap"><span>Byty Borovského a Verde Slaný II · nabídka dvou videí</span><span class="n">1 / 5</span><span>FrantišekDron · +420 723 707 958</span></div></div>
+</div>
+
+<!-- ══════════ STRANA 2 ══════════ -->
+<div class="pg"><section style="padding:26px 0 8px"><div class="wrap">
+  <div class="eyebrow">Světlo a plán čtvrtka</div>
+  <h2 class="big">Čtvrtek 29. 10., 7:45 → 12:30</h2>
+  <p style="max-width:880px">Obývák, balkon i větší ložnice míří na jihovýchod (na kartě bytu „JV pohled“). Slunce ve čtvrtek vychází v 6:49 a v 9:00 stojí na 137°, 17° nad obzorem, skoro kolmo na stranu balkonů. Svítí proto vikýři hluboko do obýváku a přes koruny stromů kreslí na podlahu stíny listí. Ulice míří na severozápad a dopoledne je ve stínu, takže domy ukážeme ze strany balkonů a z dronu.</p>
+  <p style="max-width:880px">Stavbu, park, koupaliště i město točíme se sluncem v zádech. Předpověď k pondělí 26. 10. dává ve čtvrtek jasno do jedenácti a od poledne mraky. Dron proto stihneme do 11:15, park a náměstí ze země jdou i pod mrakem. <b class="em">Natáčení je ve všech třech variantách stejné.</b></p>
+  <div class="day">
+    <div class="row"><div class="t">7:45</div><div class="c"><h4>Příjezd</h4><p>Projdeme byt: okna, balkon, úklid.</p></div></div>
+    <div class="row"><div class="t">8:00–8:45</div><div class="c"><h4>Dron v nízkém ranním světle</h4><p>Byty Borovského ze strany balkonů, park, koupaliště, Slaný. Když vydrží ranní opar nad parkem, dáme ho do úvodu. Objednat ho neumíme.</p></div></div>
+    <div class="row"><div class="t">8:45–10:15</div><div class="c"><h4>Mezonet</h4><p>Obývák a galerie, balkon, pokoje, schodiště. Fotky děláme přesně z míst, odkud byt zařídíme ve vizualizacích.</p></div></div>
+    <div class="row"><div class="t">10:15–11:15</div><div class="c"><h4>Druhá etapa</h4><p>Dron nad stavbou ze stejných úhlů jako vizualizace architekta a výhled z výšky 5. NP.</p></div></div>
+    <div class="row"><div class="t">11:15–12:30</div><div class="c"><h4>Ze země</h4><p>Kumpánova zahrada, cesta do centra, Masarykovo náměstí, zastávka linky 388. Ty na kameru, pokud chceš.</p></div></div>
+  </div>
+</div></section>
+
+<section style="padding:12px 0 2px"><div class="wrap">
+  <div class="eyebrow">Film 1 · videoprohlídka mezonetu</div>
+  <h2 class="big">Šest bloků, cca 80 s (v A cca 60 s)</h2>
+  <p style="max-width:880px">Točíme B.3.3, nebo byt, který bude ve čtvrtek nejlépe uklizený. Film uděláme tak, aby platil pro všechny tři byty, a číslo bytu do obrazu nedáme. Ve vizualizacích byt zařídíme ve skandinávském stylu: světlé dřevo, len a jeden teplý akcent.</p>
+  <div class="scn">
+    <div class="row"><div class="t">0:00–0:08</div><div class="c"><h4>Ráno nad korunami</h4><p>Dron nízko nad stromy na straně balkonů se zvedne nad střechu se střešními okny. Titulek: Byty Borovského · poslední mezonety 4+kk.</p></div></div>
+    <div class="row"><div class="t">0:08–0:26</div><div class="c"><h4>Obývák až pod střechu</h4><p>Vstup do obýváku, pohled nahoru ke galerii a kouřovodu kamen, slunce z vikýřů na podlaze. Stejný záběr se pak promění ve <span class="gs">vizualizaci</span>: kuchyň, stůl, pohovka u kamen a v kamnech oheň.</p></div></div>
+    <div class="row"><div class="t">0:26–0:36</div><div class="c"><h4>Balkon do korun</h4><p>Vikýřem ven na balkon, výhled do stromů. Titulek: balkon 4,4 m² · jihovýchod.</p></div></div>
+    <div class="row"><div class="t">0:36–0:56</div><div class="c"><h4>Pokoje</h4><p>Ložnice 15,8 m², pokoj 8,1 m² (ve vizualizaci dětský), koupelna s vanou, samostatné WC. Po dubovém schodišti nahoru do ložnice 14 m² pod střešními okny a z galerie pohled dolů do obýváku.</p></div></div>
+    <div class="row"><div class="t">0:56–1:10</div><div class="c"><h4>Okolí</h4><p>Z domu do Kumpánovy zahrady, k bytu patří parkovací stání. Záběry parku a zastávky použijeme v obou filmech.</p></div></div>
+    <div class="row"><div class="t">1:10–1:20</div><div class="c"><h4>Pozvánka</h4><p>Dron se vzdálí nad domy a park. Titulek: 4+kk · 93 m² · balkon · parkovací stání · předání koncem roku · Petr Hrubý, telefon. Cenu přidáme, jen když budeš chtít.</p></div></div>
+  </div>
+</div></section>
+
+<section style="padding:6px 0 10px"><div class="wrap">
+  <div class="strip" style="margin-top:0">
+    <figure><img src="img/p2_strip_1.jpg" alt="Horní patro mezonetu se schodištěm"><figcaption><b>Horní patro</b>Dubové schodiště, ložnice pod střešními okny a galerie nad obývákem.</figcaption></figure>
+    <figure class="plan"><img src="img/pudorys_b33.jpg" alt="Půdorys bytu B.3.3, 3. a 4. NP"><figcaption><b>Trasa kamery</b>Vstup → obývák → balkon → pokoje → schody → galerie.</figcaption></figure>
+    <figure><img src="img/p2_strip_3.jpg" alt="Strana balkonů Bytů Borovského se stromy"><figcaption><b>Strana balkonů</b>Ve čtvrtek ráno na ni svítí slunce přes stromy.</figcaption></figure>
+  </div>
+</div></section>
+  <div class="pgfoot"><div class="wrap"><span>Byty Borovského a Verde Slaný II · světlo a film 1</span><span class="n">2 / 5</span><span>FrantišekDron · honza@frantisekdron.cz</span></div></div>
+</div>
+
+<!-- ══════════ STRANA 3 ══════════ -->
+<div class="pg"><section style="padding:26px 0 6px"><div class="wrap">
+  <div class="eyebrow">Film 2 · Verde Slaný II</div>
+  <h2 class="big">Osm bloků, cca 95 s (v A cca 75 s)</h2>
+  <p style="max-width:880px">Film začíná i končí stejným záběrem stavby: na začátku je dnešní stav, na konci hotový dům.</p>
+  <div class="scn">
+    <div class="row"><div class="t">0:00–0:10</div><div class="c"><h4>Slaný shora</h4><p>Dron vysoko nad Kumpánovou zahradou: město, koupaliště a stavba. Titulek: Verde Slaný · 2. etapa.</p></div></div>
+    <div class="row"><div class="t">0:10–0:28</div><div class="c"><h4>Dům vyroste</h4><p>Dnešní stavba s jeřábem. Ve stejném záběru pak <span class="gs">patro po patru vyroste pětipodlažní dům</span> podle vizualizací architekta. Titulek: 48 bytů 1+kk až 4+kk · dokončení 2Q 2028.</p></div></div>
+    <div class="row"><div class="t">0:28–0:38</div><div class="c"><h4>Výhled z 5. NP</h4><p>Dron ve výšce budoucího pátého patra, pomalá otočka k parku a městu. Titulek: skutečný výhled z výšky 5. NP.</p></div></div>
+    <div class="row"><div class="t">0:38–0:54</div><div class="c"><h4>Park a koupaliště</h4><p>Kumpánova zahrada v podzimních barvách: aleje, fontána, jezírko, Pizzerie Terasa. Koupaliště je v říjnu zavřené. Natočíme ho, jak je, a jedním přechodem ho převedeme do léta s popiskem ilustrace. Pokud má developer letní záběry a práva k nim, použijeme je.</p></div></div>
+    <div class="row"><div class="t">0:54–1:06</div><div class="c"><h4>Co už stojí</h4><p>Obydlená první etapa a zkolaudované Byty Borovského hned vedle. Titulek: 1. etapa · 41 bytů · prodáno.</p></div></div>
+    <div class="row"><div class="t">1:06–1:20</div><div class="c"><h4>Pěšky do centra</h4><p>Cesta do centra, Masarykovo náměstí, obchody. V B a C to ukáže animovaná mapa s trasami a minutami.</p></div></div>
+    <div class="row"><div class="t">1:20–1:28</div><div class="c"><h4>Autobus do Prahy</h4><p>Zastávka a odjíždějící autobus linky 388. Titulek: metro Veleslavín · 35 min.</p></div></div>
+    <div class="row"><div class="t">1:28–1:36</div><div class="c"><h4>Pozvánka</h4><p>Dron zpět ve stejném úhlu jako na začátku, dům je hotový. Titulek: prodej běží · verdeslany.cz · Petr Hrubý, telefon.</p></div></div>
+  </div>
+</div></section>
+
+<section style="padding:16px 0 12px"><div class="wrap">
+  <div class="ask" style="margin-top:0">
+    <div class="eyebrow">Titulky ve filmu · ukázky</div>
+    <p style="margin-top:8px">Titulky jsou ve všech variantách, protože na inzerát se většina lidí dívá bez zvuku. V A a B jsou v obraze, v barvách Verde. Ve variantě C je stavíme přímo do záběrů: stojí na fasádě, nad parkem nebo u zastávky a pohybují se s kamerou, stejně jako trasy na 3D mapě. Jak to vypadá, ukazují naše dvě ukázky — stačí kliknout.</p>
+    <div class="refs">
+      <a class="ref wide" href="https://vimeo.com/1239268824" target="_blank" rel="noopener">
+        <span class="th"><img src="img/p3_vimeo.jpg" alt="Náhled filmu Nad břehy Dalešic"><span class="play">▶</span></span>
+        <span class="cap"><b>Nad břehy Dalešic · film 2:04</b>Developerský film: domy dokreslené do skutečných záběrů z dronu a titulky v prostoru.<span class="url">vimeo.com/1239268824</span></span>
+      </a>
+      <a class="ref tall" href="https://vimeo.com/1239224998/a71146b85c" target="_blank" rel="noopener">
+        <span class="th"><img src="img/vimeo_varnsdorf.jpg" alt="Náhled reelu Varnsdorf"><span class="play">▶</span></span>
+        <span class="cap"><b>Varnsdorf · reel na výšku 0:56</b>Krátká verze pro sítě: obrys domu a titulky přímo v záběru. Tak pojmeme i 30s verze ve variantě C.<span class="url">vimeo.com/1239224998</span></span>
+      </a>
+    </div>
+
+  </div>
+</div></section>
+  <div class="pgfoot"><div class="wrap"><span>Byty Borovského a Verde Slaný II · film 2 a ukázky</span><span class="n">3 / 5</span><span>FrantišekDron · +420 723 707 958</span></div></div>
+</div>
+
+<!-- ══════════ STRANA 4 ══════════ -->
+<div class="pg"><section style="padding:26px 0 4px"><div class="wrap">
+  <div class="eyebrow">Komentář · ve všech variantách</div>
+  <h2 class="big">Jen fakta, čísla slovy</h2>
+  <p style="max-width:880px">Oba texty jsou náš nástřel, upravíš si je po svém. Namluví je profesionální hlas. Když budeš chtít, může to být tvůj. V B a C k nim napíšeme ještě druhou verzi na výběr.</p>
+  <div class="vo">
+    <div class="b">
+      <div class="tg">Film 1 · Mezonet</div>
+      <div class="l">Byty Borovského ve Slaném. Poslední tři mezonety čtyři plus kk, každý devadesát tři metrů čtverečních.</div>
+      <div class="l">Obývák s kuchyní je otevřený až pod střechu, s galerií, krbovými kamny a vikýři až k podlaze.</div>
+      <div class="l">Vikýři se vychází na balkon do korun stromů. Dopoledne sem svítí slunce.</div>
+      <div class="l">Dole je ložnice, menší pokoj, koupelna s vanou a samostatná toaleta. Po dubovém schodišti se dostanete do druhé ložnice pod střešními okny.</div>
+      <div class="l">K bytu patří parkovací stání. Kumpánova zahrada je pár kroků od domu a autobus na metro Veleslavín jede třicet pět minut.</div>
+      <div class="l">Dům je zkolaudovaný a byty se předávají na konci roku. Prohlídky po dohodě.</div>
+    </div>
+    <div class="b">
+      <div class="tg">Film 2 · Verde Slaný II</div>
+      <div class="l">Slaný, třicet pět minut autobusem od pražského metra.</div>
+      <div class="l">Tady vyrůstá druhá etapa Verde Slaný: pět podlaží a čtyřicet osm bytů od jedna plus kk po čtyři plus kk, s balkonem, terasou nebo předzahrádkou.</div>
+      <div class="l">Takhle vypadá výhled z výšky pátého patra.</div>
+      <div class="l">Za domem začíná Kumpánova zahrada a hned vedle je městské koupaliště.</div>
+      <div class="l">Vedlejší domy první etapy jsou už obydlené a Byty Borovského právě zkolaudované.</div>
+      <div class="l">Do centra, do školy i na nákup se dá chodit pěšky.</div>
+      <div class="l">Dokončení je plánované na druhé čtvrtletí roku dva tisíce dvacet osm. Do kolaudace se platí deset procent ceny.</div>
+    </div>
+  </div>
+  <div class="no">
+    <div class="h">Co v komentáři nebude</div>
+    <p><s>„Bydlení, které si zamilujete.“</s> · <s>„Jedinečná příležitost, která se nebude opakovat.“</s> · <s>„Místo, kde se zastaví čas.“</s> Ve filmu mluví metry, minuty a světlo.</p>
+  </div>
+</div></section>
+
+<section style="padding:12px 0 6px"><div class="wrap">
+  <div class="ask" style="margin-top:0">
+    <div class="eyebrow">Titulky ve filmu · co v nich bude</div>
+    <ul class="tick dot" style="margin-top:10px">
+      <li><b class="gs">Film 1</b> &nbsp;Byty Borovského · poslední mezonety 4+kk · 93 m² · 3. a 4. NP</li>
+      <li><b class="gs">Film 1</b> &nbsp;obývák až pod střechu · krbová kamna · balkon 4,4 m² na jihovýchod · parkovací stání</li>
+      <li><b class="gs">Film 2</b> &nbsp;Verde Slaný · 2. etapa · 48 bytů 1+kk až 4+kk · dokončení 2Q 2028</li>
+      <li><b class="gs">Film 2</b> &nbsp;Kumpánova zahrada · koupaliště · náměstí pěšky · metro Veleslavín 35 min</li>
+      <li><b class="gs">Závěr obou</b> &nbsp;Petr Hrubý · GEPARD REALITY · telefon · verdeslany.cz</li>
+    </ul>
+  </div>
+</div></section>
+<section style="padding:10px 0 12px"><div class="wrap">
+  <div class="strip" style="margin-top:0">
+    <figure><img src="img/p3_strip_1.jpg" alt="Vizualizace architekta, druhá etapa Verde Slaný"><figcaption><b>Vizualizace architekta</b>Podle ní dům ve filmu vyroste nad dnešní stavbou.</figcaption></figure>
+    <figure><img src="img/p3_strip_2.jpg" alt="Kumpánova zahrada na podzim"><figcaption><b>Kumpánova zahrada na podzim</b>Za dva týdny bude listí dole. I proto čtvrtek.</figcaption></figure>
+    <figure><img src="img/p3_strip_3.jpg" alt="Kumpánova zahrada z dronu"><figcaption><b>Park shora</b>Kumpánova zahrada a za ní Slaný. Ve filmu ji ukážeme ze stejné výšky, jen v pohybu a ve 4K.</figcaption></figure>
+  </div>
+</div></section>
+  <div class="pgfoot"><div class="wrap"><span>Byty Borovského a Verde Slaný II · komentář a titulky</span><span class="n">4 / 5</span><span>FrantišekDron · honza@frantisekdron.cz</span></div></div>
+</div>
+
+<!-- ══════════ STRANA 5 ══════════ -->
+<div class="pg"><section style="padding:22px 0 10px"><div class="wrap">
+  <div class="eyebrow">Cena</div>
+  <h2 class="big">Tři varianty</h2>
+  <p style="max-width:900px">Liší se délka filmů, počet vizualizací a co k filmům dostaneš navíc. Obě videa natočíme z jednoho výjezdu a dron, park i cesta do centra poslouží oběma filmům. Proto jsou dvě videa levnější, než kdybychom je točili zvlášť. A s Gepardem spolupracujeme dlouhodobě. Ceny jsou bez DPH, doprava je v ceně.</p>
+
+  <div class="price">
+    <div class="card">
+      <div class="tg">Varianta A</div>
+      <h3>Dvě videa</h3>
+      <div class="desc">Videoprohlídka mezonetu a film o druhé etapě, šest rozpohybovaných vizualizací, komentář a fotky.</div>
+      <div class="amt">24 900 Kč<small>bez DPH · doprava v ceně</small></div>
+      <ul>
+        <li>Natáčení ve čtvrtek 29. 10. dopoledne: mezonet, dron, park, centrum, zastávka</li>
+        <li><b>Videoprohlídka mezonetu cca 60 s</b> ve 4K, platí pro všechny tři byty</li>
+        <li><b>Film o druhé etapě cca 75 s</b> ve 4K: dům vyroste nad dnešní stavbou a skutečný výhled z výšky 5. NP</li>
+        <li><b>6 vizualizací rozpohybovaných do videa:</b> zařízený obývák s kuchyní, ložnice a balkon mezonetu. U druhé etapy sekvence, ve které dům vyroste, a dva pohledy architekta v pohybu</li>
+        <li>Komentář namluvený profesionálním hlasem, titulky v obraze, hudba</li>
+        <li><b>Fotky:</b> letecké fotky lokality a stavby, zařízený mezonet z vizualizací do inzerátu</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="tg">Varianta B</div>
+      <h3>Delší filmy, mapa a deset vizualizací</h3>
+      <div class="desc">Celý mezonet zařízený, obývák bytu ve druhé etapě a animovaná mapa s minutami pěšky.</div>
+      <div class="amt">32 900 Kč<small>bez DPH · doprava v ceně</small></div>
+      <ul>
+        <li>Vše z varianty A</li>
+        <li><b>Videoprohlídka cca 80 s</b> a <b>film o druhé etapě cca 95 s</b></li>
+        <li><b>10 vizualizací rozpohybovaných do videa.</b> Navíc dětský pokoj a ložnice pod střechou v mezonetu a obývák a balkon bytu ve druhé etapě s výhledem do parku</li>
+        <li><b>Animovaná mapa:</b> dron nad Slaným a trasy do parku, ke koupališti, na náměstí a k autobusu s minutami pěšky</li>
+        <li>Komentář ve dvou verzích na výběr</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="tg">Varianta C</div>
+      <h3>Komplet s titulky v prostoru a kampaní</h3>
+      <div class="desc">Titulky a trasy v záběrech, 3D mapa, hero video, 30s verze a kampaň v Google Ads.</div>
+      <div class="amt">44 900 Kč<small>bez DPH · doprava v ceně</small></div>
+      <ul>
+        <li>Vše z varianty B</li>
+        <li><b>Titulky a trasy přímo v záběrech:</b> stojí v prostoru a pohybují se s kamerou. Místo plošné mapy 3D mapa okolí (ukázka: <a href="https://vimeo.com/1239268824" target="_blank" rel="noopener">Nad břehy Dalešic</a>)</li>
+        <li><b>14 vizualizací rozpohybovaných do videa.</b> Navíc kuchyň mezonetu zblízka, terasa v 5. NP, druhá etapa z druhé strany a koupaliště v létě</li>
+        <li><b>Hero video 20 s:</b> tichá smyčka do hlavičky webu</li>
+        <li><b>30s verze obou filmů</b> na šířku i na výšku pro reklamu a sociální sítě (ukázka: <a href="https://vimeo.com/1239224998/a71146b85c" target="_blank" rel="noopener">reel Varnsdorf</a>)</li>
+        <li><b>Nastavení kampaně v Google Ads</b> pro oba projekty: vyhledávání i video na YouTube. Rozpočet si nastavíš a platíš Googlu sám</li>
+      </ul>
+    </div>
+  </div>
+  <p class="addon">Ke kterékoli variantě: <b>3D prohlídka mezonetu</b> z půdorysu a fotek z natáčení, s logem Gepard, za 2 500 Kč bez DPH. Jedna stačí pro všechny tři byty.</p>
+
+  <div class="cols">
+    <div class="need">
+      <h4>Co potřebujeme od tebe</h4>
+      <ol>
+        <li>Ve čtvrtek od 7:45 přístup do B.3.3 (klíče, nebo kdo otevře). Umytá okna a vikýře a zametený balkon. Dopolední slunce ukáže každou šmouhu.</li>
+        <li>Od architekta druhé etapy koordinační situaci (DWG nebo PDF), pohledy a vizualizace v plném rozlišení, ideálně ještě před čtvrtkem. Podle nich nastavíme dron, aby dům nad stavbou seděl. K tomu kontakt na stavbyvedoucího Konsitu kvůli jeřábu.</li>
+        <li>Logo Verde a Gepard (vektor) a kontakt, který má být na konci filmů.</li>
+        <li>Tvoje rozhodnutí: cena ve filmu ano/ne. A jestli chceš být na konci filmu na kameře: jedna věta, není to podmínka.</li>
+        <li>Čísla do titulků: web uvádí do centra 5 minut pěšky, podle mapy vychází na náměstí spíš 15 až 20. Do filmu dáme jen čísla, která potvrdíš. Autobus 35 minut sedí s jízdním řádem linky 388.</li>
+      </ol>
+    </div>
+    <div>
+      <h4>Termín a dodání</h4>
+      <ul class="tick dot">
+        <li>Natáčení ve čtvrtek 29. 10., 7:45–12:30. Potvrzení potřebujeme do úterý 27. 10., protože ve středu je svátek</li>
+        <li>Fotky do 3. 11., oba filmy do 8. 11. (10 dnů od natáčení)</li>
+        <li>U varianty C hero a 30s verze s filmy, kampaň v Google Ads nastavená do 12. 11.</li>
+        <li>Dvě kola korektur v ceně</li>
+        <li>Záloha 50 % po potvrzení (fakturujeme na Absoluta Real, pokud nenapíšeš jinak), doplatek při předání filmů</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="fine"><b>Ceny</b> jsou bez DPH, oba jsme plátci. <b>Doprava</b> je v ceně všech variant, náhradní termín ani další cesty neúčtujeme. · <b>Korektury:</b> dvě kola v ceně, třetí a další 1 500 Kč za kolo. · <b>Počasí:</b> když bude ve čtvrtek pršet nebo silně foukat, natáčení přesuneme. Náhradní termín do 7 dnů, bez storna. · <b>Vizualizace</b> jsou ilustrace. Nábytek a kuchyň nejsou součástí dodávky bytu a podoba druhé etapy vychází z podkladů architekta. Ve filmu je označíme štítkem „vizualizace“. · <b>Licence:</b> Gepard i developer smí výstupy používat k prodeji Bytů Borovského a druhé etapy Verde Slaný (inzerce, weby, sociální sítě, prezentace) bez časového omezení. Jiné užití po dohodě. · <b>Google Ads (C):</b> jednorázové nastavení a předání kampaně, ne průběžná správa ani příslib počtu zájemců. Rozpočet na reklamu se platí přímo Googlu. Potřebujeme souhlas developera s reklamou a s hero videem na jeho webu. · <b>Podklady:</b> fotografie a vizualizace v tomto dokumentu pocházejí z webu verdeslany.cz a slouží jen k domluvě na záběrech. · Nabídka platí do 25. 11. 2026.</div>
+</div></section>
+
+<footer style="margin-top:auto"><div class="wrap">
+  <div class="lockup"><svg class="glyph" viewBox="0 0 64 64"><g stroke="currentColor" stroke-width="5" stroke-linecap="round" fill="none"><line x1="32" y1="32" x2="17" y2="17"/><line x1="32" y1="32" x2="47" y2="17"/><line x1="32" y1="32" x2="17" y2="47"/><line x1="32" y1="32" x2="47" y2="47"/></g><g fill="none" stroke="currentColor" stroke-width="4.5"><circle cx="17" cy="17" r="8.5"/><circle cx="47" cy="17" r="8.5"/><circle cx="17" cy="47" r="8.5"/><circle cx="47" cy="47" r="8.5"/></g><rect x="25.5" y="25.5" width="13" height="13" rx="3.5" fill="currentColor"/></svg><div class="wstack"><span class="wtop">FRANTIŠEK</span><span class="wbot">DRON</span></div></div>
+  <div class="sign">
+    <div>
+      <div class="b">Napiš nám jen, jestli jedeme A, B, nebo C.</div>
+      <div class="s" style="margin-top:6px">Čtvrtek 29. 10. dopoledne pro tebe držíme do úterý 27. 10. Ve středu je svátek.</div>
+    </div>
+    <div class="s" style="text-align:right">
+      <b style="color:#e7e3d8;font-weight:600">Jan Goldšmíd</b> — zakladatel &amp; hlavní pilot<br>
+      <span class="kvr">+420 723 707 958</span> · <a href="mailto:honza@frantisekdron.cz">honza@frantisekdron.cz</a><br>
+      <a href="https://frantisekdron.cz" target="_blank" rel="noopener">frantisekdron.cz</a>
+    </div>
+  </div>
+</div></footer>
+  <div class="pgfoot"><div class="wrap"><span>Byty Borovského a Verde Slaný II · cena</span><span class="n">5 / 5</span><span>Nabídka platí do 25. 11. 2026</span></div></div>
+</div>
+
+<script>
+document.getElementById('dlpdf').addEventListener('click', function(){
+  var b = this; b.style.display = 'none';
+  window.print();
+  setTimeout(function(){ b.style.display = ''; }, 800);
+});
+</script>
+<style>
+@page{size:A4;margin:0}
+@media print{
+  body{background:#0e1310;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .pg{page-break-after:always;break-after:page;min-height:1527px}
+  .pg:last-child{page-break-after:auto}
+}
+</style>
+</body>
+</html>
