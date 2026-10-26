@@ -145,8 +145,6 @@
   b.em{color:var(--gold-soft);font-weight:500}
   .gs{color:var(--gold-soft)}
   ul.tick li b{color:#e7e3d8;font-weight:600}
-  .strip figure.plan{background:#f4f2ee}
-  .strip figure.plan img{object-fit:contain;background:#fff;padding:6px}
   .need{border:1px solid var(--gold);border-radius:8px;padding:13px 18px 9px;background:linear-gradient(180deg,rgba(196,168,106,.13),rgba(196,168,106,.04));box-shadow:0 0 0 1px rgba(196,168,106,.35) inset,0 18px 44px -26px rgba(196,168,106,.5)}
   .need h4{font-family:"EB Garamond",Georgia,serif!important;font-size:22px!important;letter-spacing:.01em!important;text-transform:none!important;color:var(--gold-soft)!important;font-weight:500!important;margin:0 0 8px!important}
   .need ol{list-style:none;counter-reset:n;margin:0}
@@ -154,20 +152,24 @@
   .need li::before{content:counter(n);position:absolute;left:0;top:3px;width:21px;height:21px;border-radius:50%;background:var(--gold);color:#14180f;font-weight:700;font-size:11.5px;display:flex;align-items:center;justify-content:center}
   .addon{margin-top:12px;font-size:12.6px;color:var(--muted);border:1px dashed var(--line);border-radius:6px;padding:9px 16px}
   .addon b{color:#e7e3d8;font-weight:600}
-  .refs{display:grid;grid-template-columns:1.55fr 1fr;gap:16px;margin-top:12px;align-items:stretch}
-  .ref{display:flex;gap:14px;text-decoration:none;color:inherit;background:var(--panel);border:1px solid rgba(196,168,106,.45);border-radius:7px;overflow:hidden;transition:border-color .2s,transform .2s}
+  .refs{display:grid;grid-template-columns:1.35fr 1fr;gap:16px;margin-top:12px;align-items:stretch}
+  .ref{display:flex;gap:0;text-decoration:none;color:inherit;background:var(--panel);border:1px solid rgba(196,168,106,.45);border-radius:7px;overflow:hidden;transition:border-color .2s,transform .2s}
   .ref:hover{border-color:var(--gold);transform:translateY(-1px)}
-  .ref .th{position:relative;display:block;flex:none;background:#000}
-  .ref.wide{flex-direction:column}
-  .ref.wide .th img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
-  .ref.tall .th{width:150px}
-  .ref.tall .th img{width:150px;height:100%;min-height:230px;object-fit:cover;object-position:50% 40%;display:block}
-  .ref .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:52px;height:52px;border-radius:50%;background:rgba(14,19,16,.72);border:1px solid var(--gold);color:var(--gold-soft);display:flex;align-items:center;justify-content:center;font-size:19px;padding-left:4px}
-  .ref .cap{display:block;padding:10px 14px 12px;font-size:12.4px;color:var(--muted);line-height:1.45}
-  .ref .cap b{display:block;color:var(--gold-soft);font-family:'EB Garamond',serif;font-size:18px;font-weight:500;margin-bottom:3px}
-  .ref .url{display:block;margin-top:6px;color:var(--gold);font-size:11.5px;letter-spacing:.04em}
+  .ref .th{position:relative;display:block;flex:none;background:#000;align-self:flex-start}
+  .ref .th.wide img{width:300px;aspect-ratio:16/9;object-fit:cover;display:block}
+  .ref .th.tall img{width:140px;aspect-ratio:9/16;object-fit:cover;display:block}
+  .ref .play{position:absolute;left:9px;bottom:9px;width:34px;height:34px;border-radius:50%;background:rgba(14,19,16,.78);border:1px solid var(--gold);color:var(--gold-soft);display:flex;align-items:center;justify-content:center;font-size:13px;padding-left:3px}
+  .ref .cap{display:block;padding:12px 15px;font-size:12.6px;color:var(--muted);line-height:1.48}
+  .ref .cap b{display:block;color:var(--gold-soft);font-family:'EB Garamond',serif;font-size:19px;font-weight:500;margin-bottom:4px}
+  .ref .url{display:block;margin-top:8px;color:var(--gold);font-size:11.5px;letter-spacing:.04em}
+  @media screen{.pg{min-height:0}.pgfoot{margin-top:18px}}
+  .films{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+  .films h3.fh{font-size:21px;margin:6px 0 2px}
+  .films .scn{margin-top:8px}
+  .films .scn .row{grid-template-columns:74px 1fr}
+  .films .scn .c p{font-size:12.8px;color:#b9c1b4}
   .card li a{color:var(--gold-soft)}
-  @media(max-width:860px){.refs{grid-template-columns:1fr}.ref.tall .th,.ref.tall .th img{width:110px}}
+  @media(max-width:860px){.refs,.films{grid-template-columns:1fr}.ref .th.wide img{width:150px}.ref .th.tall img{width:96px}}
 </style>
 </head>
 <body>
@@ -175,261 +177,181 @@
 
 <!-- ══════════ STRANA 1 ══════════ -->
 <div class="pg">
-<div class="hero" style="height:600px">
+<div class="hero" style="height:620px">
   <img src="img/p1_hero.jpg" alt="Byty Borovského ve Slaném, září 2026">
   <div class="wrap">
     <div class="lockup"><svg class="glyph" viewBox="0 0 64 64"><g stroke="currentColor" stroke-width="5" stroke-linecap="round" fill="none"><line x1="32" y1="32" x2="17" y2="17"/><line x1="32" y1="32" x2="47" y2="17"/><line x1="32" y1="32" x2="17" y2="47"/><line x1="32" y1="32" x2="47" y2="47"/></g><g fill="none" stroke="currentColor" stroke-width="4.5"><circle cx="17" cy="17" r="8.5"/><circle cx="47" cy="17" r="8.5"/><circle cx="17" cy="47" r="8.5"/><circle cx="47" cy="47" r="8.5"/></g><rect x="25.5" y="25.5" width="13" height="13" rx="3.5" fill="currentColor"/></svg><div class="wstack"><span class="wtop">FRANTIŠEK</span><span class="wbot">DRON</span></div></div>
     <div class="eyebrow">Nabídka dvou videí · Byty Borovského a Verde Slaný II, Slaný</div>
-    <h1>Dvě videa z jednoho dopoledne: obývák až pod střechu a dům, který vyroste ze stavby.</h1>
-    <div class="sub">Ve čtvrtek 29. 10. dopoledne natočíme mezonet v Bytech Borovského a okolí druhé etapy Verde: park, koupaliště, cestu do centra i autobus na Veleslavín. Z jednoho výjezdu vzniknou dva samostatné filmy ve 4K. Videoprohlídka bude platit pro všechny tři zbývající mezonety. Ve filmu o lokalitě vyroste pětipodlažní dům nad dnešní stavbou. Komentář, rozpohybované vizualizace a fotky jsou ve všech třech variantách.</div>
+    <h1>Dvě videa z jednoho dopoledne: obývák až pod střechu a lokalita druhé etapy.</h1>
+    <div class="sub">Ve čtvrtek 29. 10. od 10:00 natočíme za necelé tři hodiny mezonet v Bytech Borovského i okolí druhé etapy Verde. Vzniknou dva samostatné filmy ve 4K: videoprohlídka, která platí pro všechny tři zbývající mezonety, a film o lokalitě druhé etapy.</div>
     <div class="meta"><span>Pro Ing. Petra Hrubého · Absoluta Real / GEPARD REALITY</span><span>26. 10. 2026 · frantisekdron.cz</span></div>
   </div>
 </div>
 
 <section style="padding-top:26px;padding-bottom:12px"><div class="wrap">
   <div class="grid4">
-    <div><div class="v">3 × 93 m²</div><div class="l">poslední mezonety 4+kk ve 3. a 4. NP · balkon na jihovýchod · 8 295 000 Kč · předání koncem roku</div></div>
-    <div><div class="v">48 bytů</div><div class="l">druhá etapa Verde · 1+kk až 4+kk · dnes 1. NP z pěti · dokončení 2Q 2028 · prodáno téměř 30 %</div></div>
-    <div><div class="v">35 min</div><div class="l">autobus 388 ze zastávky Slaný, modelářské středisko na Nádraží Veleslavín (metro A) · ve všední ráno zhruba každých 15 minut</div></div>
-    <div><div class="v">1 min</div><div class="l">z druhé etapy do Kumpánovy zahrady a ke koupališti · podle webu projektu s přímým vstupem z areálu</div></div>
+    <div><div class="v">3 × 93 m²</div><div class="l">poslední mezonety 4+kk ve 3. a 4. NP · balkon na jihovýchod · předání koncem roku</div></div>
+    <div><div class="v">48 bytů</div><div class="l">druhá etapa Verde · dnes 1. NP z pěti · dokončení 2Q 2028 · prodáno téměř 30 %</div></div>
+    <div><div class="v">35 min</div><div class="l">autobus 388 ze Slaného na Nádraží Veleslavín (metro A)</div></div>
+    <div><div class="v">1 min</div><div class="l">z druhé etapy do Kumpánovy zahrady a ke koupališti</div></div>
   </div>
 
-  <div class="grid2" style="margin-top:24px">
-    <div>
-      <div class="eyebrow">Jak jsme pochopili zadání</div>
-      <p style="margin-top:12px">Píšeš o dvou videích a každé má jiného kupce. Mezonety mají silnou cenu: 8 295 000 Kč za 93 m², tedy 89 tisíc za metr. Ve druhé etapě stojí metr 111 až 161 tisíc. Za cenu 3+kk o 70 m² ve druhé etapě je tu o 23 metrů víc, pokoj navíc a klíče koncem roku. Z fotek se ale nedá poznat, že <b class="em">obývák je otevřený až pod střechu</b>, ani jak se prázdný byt bez kuchyně dá zařídit. Videoprohlídka proto ukáže výšku a dopolední světlo a ve vizualizacích byt zařídíme.</p>
-      <p>Druhá etapa se zatím prodává z vizualizací a od července je prodáno téměř 30 %. Zbylých 34 bytů se prodává ze stavby, kde je dnes první patro z pěti. Kupec potřebuje vidět to, o čem píšeš: park a koupaliště za domem, centrum pěšky a autobus na Veleslavín. A potřebuje vidět dům. Film proto otevře záběr dnešní stavby, nad kterou <b class="em">dům podle vizualizací architekta patro po patru vyroste</b>, ve skutečném záběru z dronu.</p>
-    </div>
-    <div>
-      <div class="eyebrow">Co je v ceně vždy</div>
-      <ul class="tick" style="margin-top:14px">
-        <li>Natáčení ve čtvrtek dopoledne: mezonet, dron, park, centrum, zastávka. Ve všech variantách stejné</li>
-        <li>Dva samostatné filmy ve 4K s hudbou a gradingem</li>
-        <li><b>Úvodní sekvence filmu o druhé etapě:</b> dům vyroste nad dnešní stavbou podle vizualizací architekta</li>
-        <li>Skutečný výhled z výšky budoucího 5. NP, natočený dronem</li>
-        <li><b>Vizualizace rozpohybované do videa:</b> zařízený mezonet i druhá etapa</li>
-        <li><b>Komentář</b> namluvený profesionálním hlasem a titulky</li>
-        <li><b>Fotky:</b> letecké fotky lokality a stavby, zařízený mezonet z vizualizací do inzerátu</li>
-        <li>Dvě kola korektur, doprava v ceně</li>
-      </ul>
-      <p style="font-size:13px;color:var(--muted);margin-top:10px">Obě videa natočíme za jedno dopoledne. Náhradní termín kvůli počasí neúčtujeme.</p>
-    </div>
+  <div class="eyebrow" style="margin-top:26px">Jak jsme pochopili zadání</div>
+  <div class="grid2" style="margin-top:4px">
+    <p><b class="em">Mezonet</b> stojí 89 tisíc za metr, ve druhé etapě je metr za 111 až 161 tisíc. Za cenu 3+kk o 70 m² je tu o 23 metrů víc, pokoj navíc a klíče koncem roku. Z fotek se ale nepozná, že obývák je otevřený až pod střechu, a prázdný byt bez kuchyně si kupec nezařídí sám. Video ukáže výšku a dopolední světlo, od varianty B byt ve vizualizacích zařídíme.</p>
+    <p><b class="em">Druhá etapa</b> se prodává ze stavby, kde je dnes první patro z pěti. Kupec potřebuje vidět, o čem píšeš: park a koupaliště za domem, centrum pěšky a autobus na Veleslavín. Od varianty B k tomu nad dnešní stavbou vyroste dům podle vizualizací architekta, ve skutečném záběru z dronu.</p>
   </div>
 
   <div class="strip">
     <figure><img src="img/p1_strip_1.jpg" alt="Obývák mezonetu s krbovými kamny a galerií"><figcaption><b>Obývák až pod střechu</b>Galerie, krbová kamna, vikýře až k podlaze. Fotka výšku neunese, kamera ano.</figcaption></figure>
-    <figure><img src="img/p1_strip_2.jpg" alt="Balkon mezonetu mezi vikýři"><figcaption><b>Balkon do korun</b>Míří na jihovýchod, dopoledne na něj svítí slunce.</figcaption></figure>
-    <figure><img src="img/p1_strip_3.jpg" alt="Stavba druhé etapy z dronu, za ní koupaliště a Slaný" style="object-position:50% 70%"><figcaption><b>Druhá etapa dnes</b>Za stavbou koupaliště a Slaný. Z tohohle pohledu film o druhé etapě začne.</figcaption></figure>
+    <figure><img src="img/p1_strip_2.jpg" alt="Balkon mezonetu mezi vikýři"><figcaption><b>Balkon do korun</b>Míří na jihovýchod, v 10:00 na něj svítí slunce skoro čelně.</figcaption></figure>
+    <figure><img src="img/p1_strip_3.jpg" alt="Stavba druhé etapy z dronu, za ní koupaliště a Slaný" style="object-position:50% 70%"><figcaption><b>Druhá etapa dnes</b>Za stavbou koupaliště a Slaný. Odsud film o druhé etapě začne.</figcaption></figure>
   </div>
 </div></section>
-  <div class="pgfoot"><div class="wrap"><span>Byty Borovského a Verde Slaný II · nabídka dvou videí</span><span class="n">1 / 5</span><span>FrantišekDron · +420 723 707 958</span></div></div>
+  <div class="pgfoot"><div class="wrap"><span>Byty Borovského a Verde Slaný II · nabídka dvou videí</span><span class="n">1 / 3</span><span>FrantišekDron · +420 723 707 958</span></div></div>
 </div>
 
 <!-- ══════════ STRANA 2 ══════════ -->
-<div class="pg"><section style="padding:26px 0 8px"><div class="wrap">
-  <div class="eyebrow">Světlo a plán čtvrtka</div>
-  <h2 class="big">Čtvrtek 29. 10., 7:45 → 12:30</h2>
-  <p style="max-width:880px">Obývák, balkon i větší ložnice míří na jihovýchod (na kartě bytu „JV pohled“). Slunce ve čtvrtek vychází v 6:49 a v 9:00 stojí na 137°, 17° nad obzorem, skoro kolmo na stranu balkonů. Svítí proto vikýři hluboko do obýváku a přes koruny stromů kreslí na podlahu stíny listí. Ulice míří na severozápad a dopoledne je ve stínu, takže domy ukážeme ze strany balkonů a z dronu.</p>
-  <p style="max-width:880px">Stavbu, park, koupaliště i město točíme se sluncem v zádech. Předpověď k pondělí 26. 10. dává ve čtvrtek jasno do jedenácti a od poledne mraky. Dron proto stihneme do 11:15, park a náměstí ze země jdou i pod mrakem. <b class="em">Natáčení je ve všech třech variantách stejné.</b></p>
+<div class="pg"><section style="padding:26px 0 6px"><div class="wrap">
+  <div class="eyebrow">Plán čtvrtka</div>
+  <h2 class="big">Čtvrtek 29. 10., 10:00 → 12:45</h2>
+  <p style="max-width:900px">V 10:00 stojí slunce na 152°, 22° nad obzorem, skoro čelně proti balkonům mezonetů. Předpověď dává jasno do jedenácti a od poledne mraky, proto začínáme dronem. Park a náměstí ze země jdou i pod mrakem. Natáčení je ve všech variantách stejné.</p>
   <div class="day">
-    <div class="row"><div class="t">7:45</div><div class="c"><h4>Příjezd</h4><p>Projdeme byt: okna, balkon, úklid.</p></div></div>
-    <div class="row"><div class="t">8:00–8:45</div><div class="c"><h4>Dron v nízkém ranním světle</h4><p>Byty Borovského ze strany balkonů, park, koupaliště, Slaný. Když vydrží ranní opar nad parkem, dáme ho do úvodu. Objednat ho neumíme.</p></div></div>
-    <div class="row"><div class="t">8:45–10:15</div><div class="c"><h4>Mezonet</h4><p>Obývák a galerie, balkon, pokoje, schodiště. Fotky děláme přesně z míst, odkud byt zařídíme ve vizualizacích.</p></div></div>
-    <div class="row"><div class="t">10:15–11:15</div><div class="c"><h4>Druhá etapa</h4><p>Dron nad stavbou ze stejných úhlů jako vizualizace architekta a výhled z výšky 5. NP.</p></div></div>
-    <div class="row"><div class="t">11:15–12:30</div><div class="c"><h4>Ze země</h4><p>Kumpánova zahrada, cesta do centra, Masarykovo náměstí, zastávka linky 388. Ty na kameru, pokud chceš.</p></div></div>
+    <div class="row"><div class="t">10:00–10:45</div><div class="c"><h4>Dron</h4><p>Byty Borovského ze strany balkonů, park, koupaliště, stavba druhé etapy a výhled z výšky 5. NP.</p></div></div>
+    <div class="row"><div class="t">10:45–12:00</div><div class="c"><h4>Mezonet</h4><p>Obývák a galerie, balkon, pokoje a horní patro.</p></div></div>
+    <div class="row"><div class="t">12:00–12:45</div><div class="c"><h4>Ze země</h4><p>Kumpánova zahrada, cesta do centra, zastávka linky 388. Ty na kameru, pokud chceš.</p></div></div>
   </div>
 </div></section>
 
-<section style="padding:12px 0 2px"><div class="wrap">
-  <div class="eyebrow">Film 1 · videoprohlídka mezonetu</div>
-  <h2 class="big">Šest bloků, cca 80 s (v A cca 60 s)</h2>
-  <p style="max-width:880px">Točíme B.3.3, nebo byt, který bude ve čtvrtek nejlépe uklizený. Film uděláme tak, aby platil pro všechny tři byty, a číslo bytu do obrazu nedáme. Ve vizualizacích byt zařídíme ve skandinávském stylu: světlé dřevo, len a jeden teplý akcent.</p>
-  <div class="scn">
-    <div class="row"><div class="t">0:00–0:08</div><div class="c"><h4>Ráno nad korunami</h4><p>Dron nízko nad stromy na straně balkonů se zvedne nad střechu se střešními okny. Titulek: Byty Borovského · poslední mezonety 4+kk.</p></div></div>
-    <div class="row"><div class="t">0:08–0:26</div><div class="c"><h4>Obývák až pod střechu</h4><p>Vstup do obýváku, pohled nahoru ke galerii a kouřovodu kamen, slunce z vikýřů na podlaze. Stejný záběr se pak promění ve <span class="gs">vizualizaci</span>: kuchyň, stůl, pohovka u kamen a v kamnech oheň.</p></div></div>
-    <div class="row"><div class="t">0:26–0:36</div><div class="c"><h4>Balkon do korun</h4><p>Vikýřem ven na balkon, výhled do stromů. Titulek: balkon 4,4 m² · jihovýchod.</p></div></div>
-    <div class="row"><div class="t">0:36–0:56</div><div class="c"><h4>Pokoje</h4><p>Ložnice 15,8 m², pokoj 8,1 m² (ve vizualizaci dětský), koupelna s vanou, samostatné WC. Po dubovém schodišti nahoru do ložnice 14 m² pod střešními okny a z galerie pohled dolů do obýváku.</p></div></div>
-    <div class="row"><div class="t">0:56–1:10</div><div class="c"><h4>Okolí</h4><p>Z domu do Kumpánovy zahrady, k bytu patří parkovací stání. Záběry parku a zastávky použijeme v obou filmech.</p></div></div>
-    <div class="row"><div class="t">1:10–1:20</div><div class="c"><h4>Pozvánka</h4><p>Dron se vzdálí nad domy a park. Titulek: 4+kk · 93 m² · balkon · parkovací stání · předání koncem roku · Petr Hrubý, telefon. Cenu přidáme, jen když budeš chtít.</p></div></div>
+<section style="padding:16px 0 6px"><div class="wrap">
+  <div class="films">
+    <div>
+      <div class="eyebrow">Film 1 · videoprohlídka mezonetu</div>
+      <h3 class="fh">A cca 60 s · B a C cca 80 s</h3>
+      <div class="scn">
+        <div class="row"><div class="t">Úvod</div><div class="c"><p>Dron ze strany balkonů nad korunami a nad střechu. Titulek: poslední mezonety 4+kk.</p></div></div>
+        <div class="row"><div class="t">Obývák</div><div class="c"><p>Galerie, kamna, slunce z vikýřů. <span class="gs">V B a C se stejný záběr promění v zařízený byt.</span></p></div></div>
+        <div class="row"><div class="t">Balkon</div><div class="c"><p>Vikýřem ven do korun stromů. 4,4 m², jihovýchod.</p></div></div>
+        <div class="row"><div class="t">Pokoje</div><div class="c"><p>Ložnice 15,8 a 14 m², pokoj, koupelna s vanou, schodiště a galerie.</p></div></div>
+        <div class="row"><div class="t">Konec</div><div class="c"><p>4+kk · 93 m² · parkovací stání · předání koncem roku · tvůj kontakt.</p></div></div>
+      </div>
+    </div>
+    <div>
+      <div class="eyebrow">Film 2 · Verde Slaný II</div>
+      <h3 class="fh">A cca 60 s · B a C cca 90 s</h3>
+      <div class="scn">
+        <div class="row"><div class="t">Úvod</div><div class="c"><p>Slaný shora: park, koupaliště a stavba. <span class="gs">V B a C nad ní patro po patru vyroste dům podle vizualizací architekta.</span></p></div></div>
+        <div class="row"><div class="t">Výhled</div><div class="c"><p>Dron ve výšce budoucího 5. NP, otočka k parku a městu.</p></div></div>
+        <div class="row"><div class="t">Park</div><div class="c"><p>Kumpánova zahrada v podzimních barvách, koupaliště hned vedle.</p></div></div>
+        <div class="row"><div class="t">Město</div><div class="c"><p>Pěšky do centra, autobus 388 na Veleslavín. <span class="gs">V B a C animovaná mapa s minutami.</span></p></div></div>
+        <div class="row"><div class="t">Konec</div><div class="c"><p>Stejný záběr jako na začátku · verdeslany.cz · tvůj kontakt.</p></div></div>
+      </div>
+    </div>
   </div>
+  <p style="font-size:13px;color:var(--muted);margin-top:12px">Komentář a texty titulků napíšeme po výběru varianty a dostaneš je k odsouhlasení.</p>
 </div></section>
 
-<section style="padding:6px 0 10px"><div class="wrap">
+<section style="padding:10px 0 4px"><div class="wrap">
   <div class="strip" style="margin-top:0">
-    <figure><img src="img/p2_strip_1.jpg" alt="Horní patro mezonetu se schodištěm"><figcaption><b>Horní patro</b>Dubové schodiště, ložnice pod střešními okny a galerie nad obývákem.</figcaption></figure>
-    <figure class="plan"><img src="img/pudorys_b33.jpg" alt="Půdorys bytu B.3.3, 3. a 4. NP"><figcaption><b>Trasa kamery</b>Vstup → obývák → balkon → pokoje → schody → galerie.</figcaption></figure>
-    <figure><img src="img/p2_strip_3.jpg" alt="Strana balkonů Bytů Borovského se stromy"><figcaption><b>Strana balkonů</b>Ve čtvrtek ráno na ni svítí slunce přes stromy.</figcaption></figure>
+    <figure><img src="img/p3_strip_1.jpg" alt="Vizualizace architekta, druhá etapa Verde Slaný"><figcaption><b>Vizualizace architekta</b>Podle ní dům ve filmu vyroste nad dnešní stavbou.</figcaption></figure>
+    <figure><img src="img/p3_strip_2.jpg" alt="Kumpánova zahrada na podzim"><figcaption><b>Kumpánova zahrada</b>Za dva týdny bude listí dole. I proto čtvrtek.</figcaption></figure>
+    <figure><img src="img/p3_strip_3.jpg" alt="Kumpánova zahrada z dronu"><figcaption><b>Park shora</b>Ve filmu ze stejné výšky, jen v pohybu.</figcaption></figure>
   </div>
 </div></section>
-  <div class="pgfoot"><div class="wrap"><span>Byty Borovského a Verde Slaný II · světlo a film 1</span><span class="n">2 / 5</span><span>FrantišekDron · honza@frantisekdron.cz</span></div></div>
+
+<section style="padding:12px 0 12px"><div class="wrap">
+  <div class="ask" style="margin-top:0">
+    <div class="eyebrow">Ukázky · stačí kliknout</div>
+    <div class="refs">
+      <a class="ref" href="https://vimeo.com/1239268824" target="_blank" rel="noopener">
+        <span class="th wide"><img src="img/p3_vimeo.jpg" alt="Náhled filmu Nad břehy Dalešic"><span class="play">▶</span></span>
+        <span class="cap"><b>Nad břehy Dalešic · film 2:04</b>Developerský film: domy dokreslené do skutečných záběrů z dronu a titulky v prostoru, jaké jsou ve variantě C.<span class="url">vimeo.com/1239268824</span></span>
+      </a>
+      <a class="ref" href="https://vimeo.com/1239224998/a71146b85c" target="_blank" rel="noopener">
+        <span class="th tall"><img src="img/vimeo_varnsdorf.jpg" alt="Náhled reelu Varnsdorf"><span class="play">▶</span></span>
+        <span class="cap"><b>Varnsdorf · reel 0:56</b>Reel na výšku. Takhle pojmeme oba reely na reklamu ve variantě C.<span class="url">vimeo.com/1239224998</span></span>
+      </a>
+    </div>
+  </div>
+</div></section>
+  <div class="pgfoot"><div class="wrap"><span>Byty Borovského a Verde Slaný II · plán a filmy</span><span class="n">2 / 3</span><span>FrantišekDron · honza@frantisekdron.cz</span></div></div>
 </div>
 
 <!-- ══════════ STRANA 3 ══════════ -->
-<div class="pg"><section style="padding:26px 0 6px"><div class="wrap">
-  <div class="eyebrow">Film 2 · Verde Slaný II</div>
-  <h2 class="big">Osm bloků, cca 95 s (v A cca 75 s)</h2>
-  <p style="max-width:880px">Film začíná i končí stejným záběrem stavby: na začátku je dnešní stav, na konci hotový dům.</p>
-  <div class="scn">
-    <div class="row"><div class="t">0:00–0:10</div><div class="c"><h4>Slaný shora</h4><p>Dron vysoko nad Kumpánovou zahradou: město, koupaliště a stavba. Titulek: Verde Slaný · 2. etapa.</p></div></div>
-    <div class="row"><div class="t">0:10–0:28</div><div class="c"><h4>Dům vyroste</h4><p>Dnešní stavba s jeřábem. Ve stejném záběru pak <span class="gs">patro po patru vyroste pětipodlažní dům</span> podle vizualizací architekta. Titulek: 48 bytů 1+kk až 4+kk · dokončení 2Q 2028.</p></div></div>
-    <div class="row"><div class="t">0:28–0:38</div><div class="c"><h4>Výhled z 5. NP</h4><p>Dron ve výšce budoucího pátého patra, pomalá otočka k parku a městu. Titulek: skutečný výhled z výšky 5. NP.</p></div></div>
-    <div class="row"><div class="t">0:38–0:54</div><div class="c"><h4>Park a koupaliště</h4><p>Kumpánova zahrada v podzimních barvách: aleje, fontána, jezírko, Pizzerie Terasa. Koupaliště je v říjnu zavřené. Natočíme ho, jak je, a jedním přechodem ho převedeme do léta s popiskem ilustrace. Pokud má developer letní záběry a práva k nim, použijeme je.</p></div></div>
-    <div class="row"><div class="t">0:54–1:06</div><div class="c"><h4>Co už stojí</h4><p>Obydlená první etapa a zkolaudované Byty Borovského hned vedle. Titulek: 1. etapa · 41 bytů · prodáno.</p></div></div>
-    <div class="row"><div class="t">1:06–1:20</div><div class="c"><h4>Pěšky do centra</h4><p>Cesta do centra, Masarykovo náměstí, obchody. V B a C to ukáže animovaná mapa s trasami a minutami.</p></div></div>
-    <div class="row"><div class="t">1:20–1:28</div><div class="c"><h4>Autobus do Prahy</h4><p>Zastávka a odjíždějící autobus linky 388. Titulek: metro Veleslavín · 35 min.</p></div></div>
-    <div class="row"><div class="t">1:28–1:36</div><div class="c"><h4>Pozvánka</h4><p>Dron zpět ve stejném úhlu jako na začátku, dům je hotový. Titulek: prodej běží · verdeslany.cz · Petr Hrubý, telefon.</p></div></div>
-  </div>
-</div></section>
-
-<section style="padding:16px 0 12px"><div class="wrap">
-  <div class="ask" style="margin-top:0">
-    <div class="eyebrow">Titulky ve filmu · ukázky</div>
-    <p style="margin-top:8px">Titulky jsou ve všech variantách, protože na inzerát se většina lidí dívá bez zvuku. V A a B jsou v obraze, v barvách Verde. Ve variantě C je stavíme přímo do záběrů: stojí na fasádě, nad parkem nebo u zastávky a pohybují se s kamerou, stejně jako trasy na 3D mapě. Jak to vypadá, ukazují naše dvě ukázky — stačí kliknout.</p>
-    <div class="refs">
-      <a class="ref wide" href="https://vimeo.com/1239268824" target="_blank" rel="noopener">
-        <span class="th"><img src="img/p3_vimeo.jpg" alt="Náhled filmu Nad břehy Dalešic"><span class="play">▶</span></span>
-        <span class="cap"><b>Nad břehy Dalešic · film 2:04</b>Developerský film: domy dokreslené do skutečných záběrů z dronu a titulky v prostoru.<span class="url">vimeo.com/1239268824</span></span>
-      </a>
-      <a class="ref tall" href="https://vimeo.com/1239224998/a71146b85c" target="_blank" rel="noopener">
-        <span class="th"><img src="img/vimeo_varnsdorf.jpg" alt="Náhled reelu Varnsdorf"><span class="play">▶</span></span>
-        <span class="cap"><b>Varnsdorf · reel na výšku 0:56</b>Krátká verze pro sítě: obrys domu a titulky přímo v záběru. Tak pojmeme i 30s verze ve variantě C.<span class="url">vimeo.com/1239224998</span></span>
-      </a>
-    </div>
-
-  </div>
-</div></section>
-  <div class="pgfoot"><div class="wrap"><span>Byty Borovského a Verde Slaný II · film 2 a ukázky</span><span class="n">3 / 5</span><span>FrantišekDron · +420 723 707 958</span></div></div>
-</div>
-
-<!-- ══════════ STRANA 4 ══════════ -->
-<div class="pg"><section style="padding:26px 0 4px"><div class="wrap">
-  <div class="eyebrow">Komentář · ve všech variantách</div>
-  <h2 class="big">Jen fakta, čísla slovy</h2>
-  <p style="max-width:880px">Oba texty jsou náš nástřel, upravíš si je po svém. Namluví je profesionální hlas. Když budeš chtít, může to být tvůj. V B a C k nim napíšeme ještě druhou verzi na výběr.</p>
-  <div class="vo">
-    <div class="b">
-      <div class="tg">Film 1 · Mezonet</div>
-      <div class="l">Byty Borovského ve Slaném. Poslední tři mezonety čtyři plus kk, každý devadesát tři metrů čtverečních.</div>
-      <div class="l">Obývák s kuchyní je otevřený až pod střechu, s galerií, krbovými kamny a vikýři až k podlaze.</div>
-      <div class="l">Vikýři se vychází na balkon do korun stromů. Dopoledne sem svítí slunce.</div>
-      <div class="l">Dole je ložnice, menší pokoj, koupelna s vanou a samostatná toaleta. Po dubovém schodišti se dostanete do druhé ložnice pod střešními okny.</div>
-      <div class="l">K bytu patří parkovací stání. Kumpánova zahrada je pár kroků od domu a autobus na metro Veleslavín jede třicet pět minut.</div>
-      <div class="l">Dům je zkolaudovaný a byty se předávají na konci roku. Prohlídky po dohodě.</div>
-    </div>
-    <div class="b">
-      <div class="tg">Film 2 · Verde Slaný II</div>
-      <div class="l">Slaný, třicet pět minut autobusem od pražského metra.</div>
-      <div class="l">Tady vyrůstá druhá etapa Verde Slaný: pět podlaží a čtyřicet osm bytů od jedna plus kk po čtyři plus kk, s balkonem, terasou nebo předzahrádkou.</div>
-      <div class="l">Takhle vypadá výhled z výšky pátého patra.</div>
-      <div class="l">Za domem začíná Kumpánova zahrada a hned vedle je městské koupaliště.</div>
-      <div class="l">Vedlejší domy první etapy jsou už obydlené a Byty Borovského právě zkolaudované.</div>
-      <div class="l">Do centra, do školy i na nákup se dá chodit pěšky.</div>
-      <div class="l">Dokončení je plánované na druhé čtvrtletí roku dva tisíce dvacet osm. Do kolaudace se platí deset procent ceny.</div>
-    </div>
-  </div>
-  <div class="no">
-    <div class="h">Co v komentáři nebude</div>
-    <p><s>„Bydlení, které si zamilujete.“</s> · <s>„Jedinečná příležitost, která se nebude opakovat.“</s> · <s>„Místo, kde se zastaví čas.“</s> Ve filmu mluví metry, minuty a světlo.</p>
-  </div>
-</div></section>
-
-<section style="padding:12px 0 6px"><div class="wrap">
-  <div class="ask" style="margin-top:0">
-    <div class="eyebrow">Titulky ve filmu · co v nich bude</div>
-    <ul class="tick dot" style="margin-top:10px">
-      <li><b class="gs">Film 1</b> &nbsp;Byty Borovského · poslední mezonety 4+kk · 93 m² · 3. a 4. NP</li>
-      <li><b class="gs">Film 1</b> &nbsp;obývák až pod střechu · krbová kamna · balkon 4,4 m² na jihovýchod · parkovací stání</li>
-      <li><b class="gs">Film 2</b> &nbsp;Verde Slaný · 2. etapa · 48 bytů 1+kk až 4+kk · dokončení 2Q 2028</li>
-      <li><b class="gs">Film 2</b> &nbsp;Kumpánova zahrada · koupaliště · náměstí pěšky · metro Veleslavín 35 min</li>
-      <li><b class="gs">Závěr obou</b> &nbsp;Petr Hrubý · GEPARD REALITY · telefon · verdeslany.cz</li>
-    </ul>
-  </div>
-</div></section>
-<section style="padding:10px 0 12px"><div class="wrap">
-  <div class="strip" style="margin-top:0">
-    <figure><img src="img/p3_strip_1.jpg" alt="Vizualizace architekta, druhá etapa Verde Slaný"><figcaption><b>Vizualizace architekta</b>Podle ní dům ve filmu vyroste nad dnešní stavbou.</figcaption></figure>
-    <figure><img src="img/p3_strip_2.jpg" alt="Kumpánova zahrada na podzim"><figcaption><b>Kumpánova zahrada na podzim</b>Za dva týdny bude listí dole. I proto čtvrtek.</figcaption></figure>
-    <figure><img src="img/p3_strip_3.jpg" alt="Kumpánova zahrada z dronu"><figcaption><b>Park shora</b>Kumpánova zahrada a za ní Slaný. Ve filmu ji ukážeme ze stejné výšky, jen v pohybu a ve 4K.</figcaption></figure>
-  </div>
-</div></section>
-  <div class="pgfoot"><div class="wrap"><span>Byty Borovského a Verde Slaný II · komentář a titulky</span><span class="n">4 / 5</span><span>FrantišekDron · honza@frantisekdron.cz</span></div></div>
-</div>
-
-<!-- ══════════ STRANA 5 ══════════ -->
-<div class="pg"><section style="padding:22px 0 10px"><div class="wrap">
+<div class="pg"><section style="padding:24px 0 10px"><div class="wrap">
   <div class="eyebrow">Cena</div>
   <h2 class="big">Tři varianty</h2>
-  <p style="max-width:900px">Liší se délka filmů, počet vizualizací a co k filmům dostaneš navíc. Obě videa natočíme z jednoho výjezdu a dron, park i cesta do centra poslouží oběma filmům. Proto jsou dvě videa levnější, než kdybychom je točili zvlášť. A s Gepardem spolupracujeme dlouhodobě. Ceny jsou bez DPH, doprava je v ceně.</p>
+  <p style="max-width:900px">Obě videa natočíme z jednoho výjezdu a dron, park i cesta do centra poslouží oběma filmům. Proto jsou dvě videa levnější, než kdybychom je točili zvlášť. A s Gepardem spolupracujeme dlouhodobě. Ceny jsou bez DPH, doprava je v ceně.</p>
 
   <div class="price">
     <div class="card">
       <div class="tg">Varianta A</div>
       <h3>Dvě videa</h3>
-      <div class="desc">Videoprohlídka mezonetu a film o druhé etapě, šest rozpohybovaných vizualizací, komentář a fotky.</div>
-      <div class="amt">24 900 Kč<small>bez DPH · doprava v ceně</small></div>
+      <div class="desc">Videoprohlídka a film o lokalitě, tak jak jsou dnes.</div>
+      <div class="amt">19 900 Kč<small>bez DPH · doprava v ceně</small></div>
       <ul>
-        <li>Natáčení ve čtvrtek 29. 10. dopoledne: mezonet, dron, park, centrum, zastávka</li>
+        <li>Natáčení ve čtvrtek 29. 10. od 10:00</li>
         <li><b>Videoprohlídka mezonetu cca 60 s</b> ve 4K, platí pro všechny tři byty</li>
-        <li><b>Film o druhé etapě cca 75 s</b> ve 4K: dům vyroste nad dnešní stavbou a skutečný výhled z výšky 5. NP</li>
-        <li><b>6 vizualizací rozpohybovaných do videa:</b> zařízený obývák s kuchyní, ložnice a balkon mezonetu. U druhé etapy sekvence, ve které dům vyroste, a dva pohledy architekta v pohybu</li>
+        <li><b>Film o lokalitě cca 60 s</b> ve 4K: stavba z dronu, skutečný výhled z výšky 5. NP, park, koupaliště, centrum a autobus</li>
         <li>Komentář namluvený profesionálním hlasem, titulky v obraze, hudba</li>
-        <li><b>Fotky:</b> letecké fotky lokality a stavby, zařízený mezonet z vizualizací do inzerátu</li>
+        <li>Letecké fotky lokality a stavby</li>
       </ul>
     </div>
     <div class="card">
       <div class="tg">Varianta B</div>
-      <h3>Delší filmy, mapa a deset vizualizací</h3>
-      <div class="desc">Celý mezonet zařízený, obývák bytu ve druhé etapě a animovaná mapa s minutami pěšky.</div>
-      <div class="amt">32 900 Kč<small>bez DPH · doprava v ceně</small></div>
+      <h3>Videa s vizualizacemi</h3>
+      <div class="desc">Zařízený mezonet, dům, který vyroste nad stavbou, a mapa s minutami pěšky.</div>
+      <div class="amt">34 900 Kč<small>bez DPH · doprava v ceně</small></div>
       <ul>
         <li>Vše z varianty A</li>
-        <li><b>Videoprohlídka cca 80 s</b> a <b>film o druhé etapě cca 95 s</b></li>
-        <li><b>10 vizualizací rozpohybovaných do videa.</b> Navíc dětský pokoj a ložnice pod střechou v mezonetu a obývák a balkon bytu ve druhé etapě s výhledem do parku</li>
-        <li><b>Animovaná mapa:</b> dron nad Slaným a trasy do parku, ke koupališti, na náměstí a k autobusu s minutami pěšky</li>
-        <li>Komentář ve dvou verzích na výběr</li>
+        <li><b>Delší filmy:</b> prohlídka cca 80 s, lokalita cca 90 s</li>
+        <li><b>Dům vyroste nad dnešní stavbou:</b> úvodní sekvence filmu o druhé etapě podle vizualizací architekta</li>
+        <li><b>8 vizualizací rozpohybovaných do videa:</b> zařízený mezonet (obývák s kuchyní, ložnice, dětský pokoj, balkon) a byt ve druhé etapě s výhledem do parku</li>
+        <li>Zařízený mezonet i jako fotky do inzerátu</li>
+        <li><b>Animovaná mapa:</b> trasy do parku, na náměstí a k autobusu s minutami pěšky</li>
       </ul>
     </div>
     <div class="card">
       <div class="tg">Varianta C</div>
-      <h3>Komplet s titulky v prostoru a kampaní</h3>
-      <div class="desc">Titulky a trasy v záběrech, 3D mapa, hero video, 30s verze a kampaň v Google Ads.</div>
-      <div class="amt">44 900 Kč<small>bez DPH · doprava v ceně</small></div>
+      <h3>Komplet pro kampaň</h3>
+      <div class="desc">Titulky v prostoru, dva reely na reklamu, nastavená kampaň a 3D prohlídka.</div>
+      <div class="amt">64 900 Kč<small>bez DPH · doprava v ceně</small></div>
       <ul>
         <li>Vše z varianty B</li>
-        <li><b>Titulky a trasy přímo v záběrech:</b> stojí v prostoru a pohybují se s kamerou. Místo plošné mapy 3D mapa okolí (ukázka: <a href="https://vimeo.com/1239268824" target="_blank" rel="noopener">Nad břehy Dalešic</a>)</li>
-        <li><b>14 vizualizací rozpohybovaných do videa.</b> Navíc kuchyň mezonetu zblízka, terasa v 5. NP, druhá etapa z druhé strany a koupaliště v létě</li>
+        <li><b>Titulky a trasy přímo v záběrech</b> a 3D mapa okolí (ukázka: <a href="https://vimeo.com/1239268824" target="_blank" rel="noopener">Nad břehy Dalešic</a>)</li>
+        <li><b>14 vizualizací</b> rozpohybovaných do videa: navíc kuchyň zblízka, terasa v 5. NP, druhá etapa z druhé strany a koupaliště v létě</li>
+        <li><b>2 reely na reklamu</b> na výšku, jeden na mezonety a jeden na druhou etapu (ukázka: <a href="https://vimeo.com/1239224998/a71146b85c" target="_blank" rel="noopener">reel Varnsdorf</a>)</li>
         <li><b>Hero video 20 s:</b> tichá smyčka do hlavičky webu</li>
-        <li><b>30s verze obou filmů</b> na šířku i na výšku pro reklamu a sociální sítě (ukázka: <a href="https://vimeo.com/1239224998/a71146b85c" target="_blank" rel="noopener">reel Varnsdorf</a>)</li>
-        <li><b>Nastavení kampaně v Google Ads</b> pro oba projekty: vyhledávání i video na YouTube. Rozpočet si nastavíš a platíš Googlu sám</li>
+        <li><b>Nastavení kampaně v Google Ads</b> pro oba projekty, vyhledávání i YouTube</li>
+        <li><b>3D prohlídka mezonetu</b> s logem Gepard, jedna pro všechny tři byty</li>
       </ul>
     </div>
   </div>
-  <p class="addon">Ke kterékoli variantě: <b>3D prohlídka mezonetu</b> z půdorysu a fotek z natáčení, s logem Gepard, za 2 500 Kč bez DPH. Jedna stačí pro všechny tři byty.</p>
+  <p class="addon">K variantě A nebo B: <b>3D prohlídka mezonetu</b> za 2 500 Kč bez DPH.</p>
 
   <div class="cols">
     <div class="need">
       <h4>Co potřebujeme od tebe</h4>
       <ol>
-        <li>Ve čtvrtek od 7:45 přístup do B.3.3 (klíče, nebo kdo otevře). Umytá okna a vikýře a zametený balkon. Dopolední slunce ukáže každou šmouhu.</li>
-        <li>Od architekta druhé etapy koordinační situaci (DWG nebo PDF), pohledy a vizualizace v plném rozlišení, ideálně ještě před čtvrtkem. Podle nich nastavíme dron, aby dům nad stavbou seděl. K tomu kontakt na stavbyvedoucího Konsitu kvůli jeřábu.</li>
-        <li>Logo Verde a Gepard (vektor) a kontakt, který má být na konci filmů.</li>
-        <li>Tvoje rozhodnutí: cena ve filmu ano/ne. A jestli chceš být na konci filmu na kameře: jedna věta, není to podmínka.</li>
-        <li>Čísla do titulků: web uvádí do centra 5 minut pěšky, podle mapy vychází na náměstí spíš 15 až 20. Do filmu dáme jen čísla, která potvrdíš. Autobus 35 minut sedí s jízdním řádem linky 388.</li>
+        <li>Ve čtvrtek od 10:00 přístup do B.3.3 (klíče, nebo kdo otevře). Umytá okna a vikýře, zametený balkon.</li>
+        <li>Pro B a C od architekta druhé etapy koordinační situaci a vizualizace v plném rozlišení, ideálně před čtvrtkem. K tomu kontakt na stavbyvedoucího kvůli jeřábu.</li>
+        <li>Logo Verde a Gepard, kontakt na konec filmů a jestli má být ve filmu cena.</li>
+        <li>Čísla do titulků: web uvádí do centra 5 minut pěšky, mapa ukazuje 15 až 20. Do filmu dáme jen to, co potvrdíš.</li>
       </ol>
     </div>
     <div>
       <h4>Termín a dodání</h4>
       <ul class="tick dot">
-        <li>Natáčení ve čtvrtek 29. 10., 7:45–12:30. Potvrzení potřebujeme do úterý 27. 10., protože ve středu je svátek</li>
-        <li>Fotky do 3. 11., oba filmy do 8. 11. (10 dnů od natáčení)</li>
-        <li>U varianty C hero a 30s verze s filmy, kampaň v Google Ads nastavená do 12. 11.</li>
+        <li>Natáčení ve čtvrtek 29. 10., 10:00–12:45. Potvrzení prosíme do úterý 27. 10., ve středu je svátek</li>
+        <li>Fotky do 3. 11., oba filmy do 8. 11.</li>
+        <li>Varianta C: reely, hero a kampaň do 12. 11.</li>
         <li>Dvě kola korektur v ceně</li>
-        <li>Záloha 50 % po potvrzení (fakturujeme na Absoluta Real, pokud nenapíšeš jinak), doplatek při předání filmů</li>
+        <li>Záloha 50 % po potvrzení, doplatek při předání filmů</li>
       </ul>
     </div>
   </div>
 
-  <div class="fine"><b>Ceny</b> jsou bez DPH, oba jsme plátci. <b>Doprava</b> je v ceně všech variant, náhradní termín ani další cesty neúčtujeme. · <b>Korektury:</b> dvě kola v ceně, třetí a další 1 500 Kč za kolo. · <b>Počasí:</b> když bude ve čtvrtek pršet nebo silně foukat, natáčení přesuneme. Náhradní termín do 7 dnů, bez storna. · <b>Vizualizace</b> jsou ilustrace. Nábytek a kuchyň nejsou součástí dodávky bytu a podoba druhé etapy vychází z podkladů architekta. Ve filmu je označíme štítkem „vizualizace“. · <b>Licence:</b> Gepard i developer smí výstupy používat k prodeji Bytů Borovského a druhé etapy Verde Slaný (inzerce, weby, sociální sítě, prezentace) bez časového omezení. Jiné užití po dohodě. · <b>Google Ads (C):</b> jednorázové nastavení a předání kampaně, ne průběžná správa ani příslib počtu zájemců. Rozpočet na reklamu se platí přímo Googlu. Potřebujeme souhlas developera s reklamou a s hero videem na jeho webu. · <b>Podklady:</b> fotografie a vizualizace v tomto dokumentu pocházejí z webu verdeslany.cz a slouží jen k domluvě na záběrech. · Nabídka platí do 25. 11. 2026.</div>
+  <div class="fine"><b>Ceny</b> jsou bez DPH, oba jsme plátci. Doprava ani náhradní termín se neúčtují. · <b>Korektury:</b> dvě kola v ceně, další 1 500 Kč za kolo. · <b>Počasí:</b> když bude pršet nebo silně foukat, natáčení přesuneme do 7 dnů, bez storna. · <b>Vizualizace</b> jsou ilustrace a ve filmu nesou štítek „vizualizace“. Nábytek a kuchyň nejsou součástí dodávky bytu. · <b>Licence:</b> Gepard i developer smí výstupy používat k prodeji Bytů Borovského a druhé etapy Verde Slaný bez časového omezení. · <b>Google Ads (C):</b> jednorázové nastavení a předání kampaně, ne průběžná správa. Rozpočet na reklamu se platí přímo Googlu. · <b>Podklady:</b> fotografie v tomto dokumentu jsou z webu verdeslany.cz. · Nabídka platí do 25. 11. 2026.</div>
 </div></section>
 
 <footer style="margin-top:auto"><div class="wrap">
@@ -437,7 +359,7 @@
   <div class="sign">
     <div>
       <div class="b">Napiš nám jen, jestli jedeme A, B, nebo C.</div>
-      <div class="s" style="margin-top:6px">Čtvrtek 29. 10. dopoledne pro tebe držíme do úterý 27. 10. Ve středu je svátek.</div>
+      <div class="s" style="margin-top:6px">Čtvrtek 29. 10. od 10:00 pro tebe držíme do úterý 27. 10.</div>
     </div>
     <div class="s" style="text-align:right">
       <b style="color:#e7e3d8;font-weight:600">Jan Goldšmíd</b> — zakladatel &amp; hlavní pilot<br>
@@ -446,7 +368,7 @@
     </div>
   </div>
 </div></footer>
-  <div class="pgfoot"><div class="wrap"><span>Byty Borovského a Verde Slaný II · cena</span><span class="n">5 / 5</span><span>Nabídka platí do 25. 11. 2026</span></div></div>
+  <div class="pgfoot"><div class="wrap"><span>Byty Borovského a Verde Slaný II · cena</span><span class="n">3 / 3</span><span>Nabídka platí do 25. 11. 2026</span></div></div>
 </div>
 
 <script>
