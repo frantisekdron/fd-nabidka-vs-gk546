@@ -168,13 +168,26 @@
   .mini .tg{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600}
   .mini p{margin:6px 0 0;font-size:12.8px;color:#b9c1b4;line-height:1.48}
   .vo .l{font-size:15.5px!important}
+  .cols{align-items:start}
+  .kost{display:flex;flex-direction:column;gap:8px;margin-top:14px}
+  .kr{display:grid;grid-template-columns:150px 1fr;gap:12px;align-items:stretch}
+  .kl{display:flex;flex-direction:column;justify-content:center}
+  .kl b{font-size:13.5px;color:#e7e3d8;font-weight:600}
+  .kl span{font-size:11.5px;color:var(--muted2)}
+  .kb{display:flex;gap:3px;min-height:46px}
+  .sg{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:5px 7px;display:flex;flex-direction:column;justify-content:center;min-width:0;overflow:hidden}
+  .sg b{font-size:11.2px;font-weight:600;color:#d9ddd3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.25}
+  .sg i{font-style:normal;font-size:10.5px;color:var(--muted2);line-height:1.2}
+  .sg.v{background:linear-gradient(180deg,rgba(196,168,106,.22),rgba(196,168,106,.08));border-color:rgba(196,168,106,.6)}
+  .sg.v b{color:var(--gold-soft)}
+  .kleg{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-1px;margin-right:4px;background:linear-gradient(180deg,rgba(196,168,106,.35),rgba(196,168,106,.12));border:1px solid rgba(196,168,106,.6)}
   .films{display:grid;grid-template-columns:1fr 1fr;gap:34px}
   .films h3.fh{font-size:21px;margin:6px 0 2px}
   .films .scn{margin-top:8px}
   .films .scn .row{grid-template-columns:74px 1fr}
   .films .scn .c p{font-size:12.8px;color:#b9c1b4}
   .card li a{color:var(--gold-soft)}
-  @media(max-width:860px){.refs,.films,.mini{grid-template-columns:1fr}.ref .th.wide img{width:150px}.ref .th.tall img{width:96px}}
+  @media(max-width:860px){.kr{grid-template-columns:1fr;gap:4px}.kr>*{min-width:0}.kb{flex-wrap:wrap}.sg{flex:1 1 30%!important}.sg b{white-space:normal}.refs,.films,.mini{grid-template-columns:1fr}.ref .th.wide img{width:150px}.ref .th.tall img{width:96px}}
 </style>
 </head>
 <body>
@@ -188,7 +201,7 @@
     <div class="lockup"><svg class="glyph" viewBox="0 0 64 64"><g stroke="currentColor" stroke-width="5" stroke-linecap="round" fill="none"><line x1="32" y1="32" x2="17" y2="17"/><line x1="32" y1="32" x2="47" y2="17"/><line x1="32" y1="32" x2="17" y2="47"/><line x1="32" y1="32" x2="47" y2="47"/></g><g fill="none" stroke="currentColor" stroke-width="4.5"><circle cx="17" cy="17" r="8.5"/><circle cx="47" cy="17" r="8.5"/><circle cx="17" cy="47" r="8.5"/><circle cx="47" cy="47" r="8.5"/></g><rect x="25.5" y="25.5" width="13" height="13" rx="3.5" fill="currentColor"/></svg><div class="wstack"><span class="wtop">FRANTIŠEK</span><span class="wbot">DRON</span></div></div>
     <div class="eyebrow">Varianta C · scénář a plán natáčení · Byty Borovského a Verde Slaný II</div>
     <h1>Čtvrtek 29. 10. od 8:00: dva filmy, dva reely a všechno kolem nich.</h1>
-    <div class="sub">Díky za potvrzení a podklady. Posíláme kostru obou filmů, dva návrhy komentáře ke každému a plán čtvrtka. Scénář je záměrně rámcový: na místě natočíme víc, než se do filmů vejde, a pořadí doladíme ve střihu.</div>
+    <div class="sub">Díky za potvrzení a podklady. Posíláme kostry všech videí, návrhy komentáře a plán čtvrtka. Scénář je záměrně rámcový: na místě natočíme víc, než se do filmů vejde, a pořadí doladíme ve střihu.</div>
     <div class="meta"><span>Pro Ing. Petra Hrubého · Absoluta Real / GEPARD REALITY</span><span>Varianta C · 64 900 Kč bez DPH</span><span>28. 10. 2026 · frantisekdron.cz</span></div>
   </div>
 </div>
@@ -224,9 +237,21 @@
 </div>
 
 <!-- ══════════ STRANA 2 ══════════ -->
-<div class="pg"><section style="padding:26px 0 6px"><div class="wrap">
+<div class="pg"><section style="padding:26px 0 4px"><div class="wrap">
+  <div class="eyebrow">Kostry videí ve zkratce</div>
+  <h2 class="big">Pět videí na jedné straně</h2>
+  <div class="kost">
+    <div class="kr"><div class="kl"><b>Film 1 · mezonet</b><span>cca 80 s · 16:9</span></div><div class="kb"><span class="sg" style="flex:8"><b>Úvod</b><i>8 s</i></span><span class="sg v" style="flex:18"><b>Obývák → zařízený</b><i>18 s</i></span><span class="sg" style="flex:10"><b>Balkon</b><i>10 s</i></span><span class="sg v" style="flex:14"><b>Pokoje</b><i>14 s</i></span><span class="sg v" style="flex:12"><b>Nahoře</b><i>12 s</i></span><span class="sg v" style="flex:10"><b>Okolí</b><i>10 s</i></span><span class="sg" style="flex:8"><b>Konec</b><i>8 s</i></span></div></div>
+    <div class="kr"><div class="kl"><b>Film 2 · Verde II</b><span>cca 90 s · 16:9</span></div><div class="kb"><span class="sg" style="flex:10"><b>Slaný shora</b><i>10 s</i></span><span class="sg v" style="flex:18"><b>Dům vyroste</b><i>18 s</i></span><span class="sg" style="flex:10"><b>Výhled 5. NP</b><i>10 s</i></span><span class="sg v" style="flex:12"><b>Uvnitř</b><i>12 s</i></span><span class="sg v" style="flex:14"><b>Park a plovárna</b><i>14 s</i></span><span class="sg" style="flex:14"><b>Město · 3D mapa</b><i>14 s</i></span><span class="sg" style="flex:12"><b>Konec</b><i>12 s</i></span></div></div>
+    <div class="kr"><div class="kl"><b>Reel 1 · mezonety</b><span>cca 20 s · 9:16</span></div><div class="kb"><span class="sg" style="flex:3"><b>Prázdný obývák</b><i>3 s</i></span><span class="sg v" style="flex:7"><b>Zařídí se</b><i>7 s</i></span><span class="sg" style="flex:6"><b>Galerie a balkon</b><i>6 s</i></span><span class="sg" style="flex:4"><b>Konec</b><i>4 s</i></span></div></div>
+    <div class="kr"><div class="kl"><b>Reel 2 · Verde II</b><span>cca 20 s · 9:16</span></div><div class="kb"><span class="sg" style="flex:3"><b>Stavba</b><i>3 s</i></span><span class="sg v" style="flex:7"><b>Dům vyroste</b><i>7 s</i></span><span class="sg" style="flex:5"><b>Park a plovárna</b><i>5 s</i></span><span class="sg" style="flex:3"><b>Praha 35 min</b><i>3 s</i></span><span class="sg" style="flex:2"><b>Konec</b><i>2 s</i></span></div></div>
+    <div class="kr"><div class="kl"><b>Hero</b><span>20 s · smyčka</span></div><div class="kb"><span class="sg" style="flex:10"><b>Dron nad parkem</b><i>10 s</i></span><span class="sg v" style="flex:10"><b>Hotový dům</b><i>10 s</i></span></div></div>
+  </div>
+  <p style="font-size:12.5px;color:var(--muted);margin-top:8px"><span class="kleg"></span> zlatě úseky s rozpohybovanými vizualizacemi · časy jsou orientační, doladíme je ve střihu</p>
+</div></section>
+<section style="padding:14px 0 6px"><div class="wrap">
   <div class="eyebrow">Scénář · rámcově</div>
-  <h2 class="big">Dva filmy, kostra bloků</h2>
+  <h2 class="big">Co bude v blocích</h2>
   <p style="max-width:900px">Bloky jsou kostra. Délky a pořadí doladíme ve střihu podle toho, co ve čtvrtek natočíme, a každý záběr točíme ve víc variantách. Zlatě jsou titulky v prostoru: stojí na fasádě, nad střechou nebo v parku a pohybují se s kamerou.</p>
   <div class="films" style="margin-top:14px">
     <div>
@@ -273,8 +298,6 @@
     <div class="need">
       <h4>Co od tebe ještě potřebujeme</h4>
       <ol>
-        <li>Kontakt na stavbyvedoucího, ideálně do čtvrtka 8:00, ať víme, kde bude stát jeřáb.</li>
-        <li>Verzi komentáře (1, 2, nebo mix) do pondělí 2. 11., ať ji stihneme namluvit.</li>
         <li>Jestli má být ve filmech a reelech cena.</li>
         <li>Pro Google Ads: čí účet použijeme (Gepard, nebo developer) a kam mají reklamy vést.</li>
       </ol>
@@ -298,8 +321,8 @@
 <!-- ══════════ STRANA 3 ══════════ -->
 <div class="pg"><section style="padding:26px 0 8px"><div class="wrap">
   <div class="eyebrow">Komentář · namluví profesionální hlas</div>
-  <h2 class="big">Dva návrhy na každý film</h2>
-  <p style="max-width:900px">Na kameře nikdo nebude, filmy nese hlas a titulky. Vyber si verzi, nebo je klidně smíchej. Čísla jsou z webu projektu a od tebe, centrum podle domluvy 10 minut.</p>
+  <h2 class="big">Dva směry na každý film</h2>
+  <p style="max-width:900px">Na kameře nikdo nebude, filmy nese hlas a titulky. Vybírat nic nemusíš: finální text složíme z obou směrů podle toho, co ve čtvrtek natočíme, a pošleme ho s prvním sestavením filmů. Čísla jsou z webu projektu a od tebe, centrum podle domluvy 10 minut.</p>
   <div class="vo">
     <div class="b">
       <div class="tg">Film 1 · verze 1 · věcně</div>
