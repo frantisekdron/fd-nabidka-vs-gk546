@@ -321,8 +321,8 @@
     var a=fetch('odpovedi.json?'+Date.now()).then(function(r){return r.ok?r.json():[]}).then(function(arr){
       (arr||[]).forEach(function(r){ add(r.id,r.iso||r.cas,r.zprava,/rozepsané/.test(r.nabidka||'')); });
     }).catch(function(){});
-    var b=fetch('https://ntfy.sh/'+TOPIC+'/json?poll=1&since=12h').then(function(r){return r.text()}).then(function(t){
-      t.split('\n').forEach(function(l){ if(!l.trim())return; try{ var m=JSON.parse(l); if(m.event==='message'&&(m.click||'').indexOf('/prubeh/')>=0&&/odpovědi/.test(m.title||'')) add(m.id,new Date(m.time*1000).toISOString(),m.message,/rozepsané/.test(m.title)); }catch(e){} });
+    var b=fetch('https://ntfy.sh/'+TOPIC+'/json?poll=1&since=1h').then(function(r){return r.text()}).then(function(t){
+      t.split('\n').forEach(function(l){ if(!l.trim())return; try{ var m=JSON.parse(l); if(m.event==='message'&&(m.click||'').indexOf('/prubeh/')>=0&&/odpovědi/.test(m.title||'')&&!/TEST FrantišekDron/.test(m.message||'')) add(m.id,new Date(m.time*1000).toISOString(),m.message,/rozepsané/.test(m.title)); }catch(e){} });
     }).catch(function(){});
     Promise.all([a,b]).then(function(){ render(Object.keys(items).map(function(k){return items[k]}).sort(function(x,y){return x.cas<y.cas?1:-1})); });
   }
