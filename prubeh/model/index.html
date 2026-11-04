@@ -172,6 +172,17 @@ scene.add(sun);
 const ground = new THREE.Mesh(new THREE.CircleGeometry(900, 96), new THREE.MeshStandardMaterial({ color: 0x9aa58a, roughness: 1 }));
 ground.rotation.x = -Math.PI / 2; ground.position.y = -0.2; ground.receiveShadow = true;
 scene.add(ground);
+// okolí podle areálové situace (parkoviště 2. etapy, stání u domu, příjezd, chodníky) – pohled shora z modelu okolí, sever nahoře,
+// rám v místních souřadnicích scény (svět = X, výška, −Y); okoli.jpg dělá okoli/parkoviste2_shora.py + okoli_textura.py
+const OKOLI = { x0: -70, x1: 50, y0: -60, y1: 55 };
+const okoli = new THREE.Mesh(new THREE.PlaneGeometry(OKOLI.x1 - OKOLI.x0, OKOLI.y1 - OKOLI.y0), new THREE.MeshStandardMaterial({ roughness: 1 }));
+okoli.rotation.x = -Math.PI / 2; okoli.position.set((OKOLI.x0 + OKOLI.x1) / 2, -0.17, -(OKOLI.y0 + OKOLI.y1) / 2);
+okoli.receiveShadow = true; okoli.visible = false; scene.add(okoli);
+let okoliNacteno = false;
+new THREE.TextureLoader().load('okoli.jpg', (t) => {
+  t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = renderer.capabilities.getMaxAnisotropy();
+  okoli.material.map = t; okoli.material.needsUpdate = true; okoliNacteno = true; okoli.visible = ground.position.y > -1;
+}, undefined, () => {});
 scene.fog = new THREE.Fog(0xdde4e6, 180, 700);
 
 const draco = new DRACOLoader();
@@ -222,6 +233,7 @@ function nastavRezim(r) {
   if (r === 'hotovy') { zobraz((c) => c.stav === 'hotovy'); ground.position.y = -0.2; }
   if (r === 'hruba') { zobraz((c) => c.stav === 'hruba'); ground.position.y = -0.2; }
   if (r === 'rust') aplikujRust();
+  okoli.visible = okoliNacteno && ground.position.y > -1;
 }
 function aplikujRust() {
   const s = Number(slider.value);
@@ -229,6 +241,7 @@ function aplikujRust() {
   if (s >= 6) zobraz((c) => c.stav === 'hotovy');
   else zobraz((c) => c.stav === 'hruba' && c.podlazi <= s && c.podlazi <= 5);
   ground.position.y = s === 0 ? -3.6 : -0.2;
+  okoli.visible = okoliNacteno && s !== 0;          // u 1. PP je zem níž, okolí by zakrylo suterén
 }
 tlacitka.forEach((b) => b.addEventListener('click', () => nastavRezim(b.dataset.rezim)));
 slider.addEventListener('input', aplikujRust);
