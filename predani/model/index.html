@@ -992,7 +992,7 @@ function kPohlidce(jm) {
 }
 document.querySelectorAll('[data-dvere]').forEach((b) => b.addEventListener('click', () => kPohlidce(b.dataset.dvere)));
 document.querySelectorAll('[data-prohlidka]').forEach((b) => b.addEventListener('click', () => kPohlidce(b.dataset.prohlidka)));
-const ZNACKY_PROHLIDEK = [{ el: document.getElementById('znackaByt'), w: () => uvW(14, 3, 21), jm: 'JZ' }, { el: document.getElementById('znackaMez'), w: () => xyW(150.1, -44.5, 8.5), jm: 'BB' }];
+const ZNACKY_PROHLIDEK = [{ el: document.getElementById('znackaByt'), w: () => uvW(14, 3, 21), jm: 'JZ' }, { el: document.getElementById('znackaMez'), w: () => { const d = DVERE.find((x) => x.jm === 'BB'); return d && d.w ? xyW(d.w[0], d.w[1], d.zg + 9.5) : xyW(140, -72, 8.5); }, jm: 'BB' }];
 
 // ovládání: tažení = rozhlížení (v chůzi), klik/ťuk = dojdi tam / dveře / panáček
 const ray = new THREE.Raycaster(), mys = new THREE.Vector2();
@@ -1613,9 +1613,12 @@ function postavStavajici(D) {
     fr.castShadow = pr.castShadow = os.castShadow = true; stavGrp.add(fr, os, pr); }
   // v21: kolize stávajících domů (polygony z KN) – chůze kolem nich, ne skrz
   for (const key of ['BB', 'SO07']) for (const h of D[key]) { const P = h.P; kolizePoly.push({ pts: P, x0: Math.min(...P.map((q) => q[0])), x1: Math.max(...P.map((q) => q[0])), y0: Math.min(...P.map((q) => q[1])), y1: Math.max(...P.map((q) => q[1])) }); }
-  // v21: vchod do ukázkového mezonetu BB – nelze jednoznačně určit B.3.3 (karta bytu není v podkladech) → hlavní vstup BB nejblíž parkovišti / spojovací cestě mezi řadami (≈ 153,6; −40,6)
-  { const T0 = [153.6, -40.6]; let best = null, bd = 1e9;
-    for (const o of dvere) { const X = o[0], Y = -o[2]; if (X < 120 || Y > -5) continue; const dd = Math.hypot(X - T0[0], Y - T0[1]); if (dd < bd) { bd = dd; best = o; } }
+  // v23: ukázkový mezonet = Franta: „úplně ten krajní vpravo, nahoře, z pohledu jakoby z parkoviště“ → horní blok (na ortofotu 0309 nahoře = řada 1, y ≈ −60) a v něm dům, který je při pohledu
+  // od parkoviště (z předprostoru k fasádě) nejvíc vpravo = konec řady s nejmenším x (pohled na fotku 0309: vpravo = −x). Kandidáty: koncové domy obou řad (window.__bbKandidati, ?ladit=1).
+  { const dv = dvere.filter((o) => o[0] > 120 && o[0] < 200).map((o) => ({ o, X: o[0], Y: -o[2] }));
+    const r1 = dv.filter((q) => q.Y < -48).sort((a, b) => a.X - b.X), r2 = dv.filter((q) => q.Y >= -48).sort((a, b) => a.X - b.X);
+    window.__bbKandidati = [r1[0], r1[r1.length - 1], r2[0], r2[r2.length - 1]].filter(Boolean).map((q, i) => ({ n: i + 1, x: q.X, y: q.Y }));
+    const best = r1.length ? r1[0].o : null;
     if (best) registrujDvere({ w: [best[0], -best[2]], zg: best[1] - 1.05, n: new THREE.Vector3(Math.sin(best[3]), 0, Math.cos(best[3])), jm: 'BB', off: 0.9, zpet: 0.8, nadpis: 'VSTOUPIT DO MEZONETU', popis: 'Ukázkový mezonet 4+kk · 3D prohlídka', titul: '3D prohlídka – ukázkový mezonet 4+kk', url: MEZONET_URL }); }
   const mDv = envReg(new THREE.MeshStandardMaterial({ color: 0x2b2d30, roughness: 0.5 })), dm = new THREE.InstancedMesh(new THREE.BoxGeometry(1.0, 2.1, 0.08), mDv, dvere.length);
   dvere.forEach((o, i) => { Q.setFromAxisAngle(new THREE.Vector3(0, 1, 0), o[3]); M.compose(V.set(o[0], o[1], o[2]), Q, Sx); dm.setMatrixAt(i, M); }); stavGrp.add(dm);
