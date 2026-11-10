@@ -1,0 +1,377 @@
+{
+ "01": {
+  "soubor": "P1181937",
+  "nove": "01",
+  "stav": "ponecháno"
+ },
+ "02": {
+  "soubor": "P1181942",
+  "nove": null,
+  "stav": "vyřazeno"
+ },
+ "03": {
+  "soubor": "P1181947",
+  "nove": "02",
+  "stav": "ponecháno"
+ },
+ "04": {
+  "soubor": "P1181962",
+  "nove": "03",
+  "stav": "ponecháno"
+ },
+ "05": {
+  "soubor": "P1181967",
+  "nove": "04",
+  "stav": "ponecháno"
+ },
+ "06": {
+  "soubor": "P1181974",
+  "nove": "05",
+  "stav": "ponecháno"
+ },
+ "07": {
+  "soubor": "P1181977",
+  "nove": "06",
+  "stav": "ponecháno"
+ },
+ "08": {
+  "soubor": "P1181982",
+  "nove": "07",
+  "stav": "ponecháno"
+ },
+ "09": {
+  "soubor": "P1181987",
+  "nove": "08",
+  "stav": "ponecháno"
+ },
+ "10": {
+  "soubor": "P1181992",
+  "nove": "09",
+  "stav": "ponecháno"
+ },
+ "11": {
+  "soubor": "P1181997",
+  "nove": "10",
+  "stav": "ponecháno"
+ },
+ "12": {
+  "soubor": "P1182002",
+  "nove": "11",
+  "stav": "ponecháno"
+ },
+ "13": {
+  "soubor": "P1182007",
+  "nove": "12",
+  "stav": "ponecháno"
+ },
+ "14": {
+  "soubor": "P1182014",
+  "nove": null,
+  "stav": "vyřazeno"
+ },
+ "15": {
+  "soubor": "P1182017",
+  "nove": "13",
+  "stav": "ponecháno"
+ },
+ "16": {
+  "soubor": "P1182022",
+  "nove": "14",
+  "stav": "ponecháno"
+ },
+ "17": {
+  "soubor": "P1182029",
+  "nove": "15",
+  "stav": "ponecháno"
+ },
+ "18": {
+  "soubor": "P1182033",
+  "nove": "16",
+  "stav": "ponecháno"
+ },
+ "19": {
+  "soubor": "P1182037",
+  "nove": "17",
+  "stav": "ponecháno"
+ },
+ "20": {
+  "soubor": "P1182042",
+  "nove": "18",
+  "stav": "ponecháno"
+ },
+ "21": {
+  "soubor": "P1182047",
+  "nove": "19",
+  "stav": "ponecháno"
+ },
+ "22": {
+  "soubor": "P1182053",
+  "nove": "20",
+  "stav": "ponecháno"
+ },
+ "23": {
+  "soubor": "P1182057",
+  "nove": null,
+  "stav": "vyřazeno"
+ },
+ "24": {
+  "soubor": "P1182062",
+  "nove": "21",
+  "stav": "ponecháno"
+ },
+ "25": {
+  "soubor": "P1182069",
+  "nove": "22",
+  "stav": "ponecháno"
+ },
+ "26": {
+  "soubor": "P1182072",
+  "nove": "23",
+  "stav": "ponecháno"
+ },
+ "27": {
+  "soubor": "P1182078",
+  "nove": "24",
+  "stav": "ponecháno"
+ },
+ "28": {
+  "soubor": "P1182083",
+  "nove": "25",
+  "stav": "ponecháno"
+ },
+ "29": {
+  "soubor": "P1182088",
+  "nove": "26",
+  "stav": "ponecháno"
+ },
+ "30": {
+  "soubor": "P1182092",
+  "nove": "27",
+  "stav": "ponecháno"
+ },
+ "31": {
+  "soubor": "P1182099",
+  "nove": "28",
+  "stav": "ponecháno"
+ },
+ "32": {
+  "soubor": "P1182104",
+  "nove": "29",
+  "stav": "ponecháno"
+ },
+ "33": {
+  "soubor": "P1182107",
+  "nove": "30",
+  "stav": "ponecháno"
+ },
+ "34": {
+  "soubor": "P1182114",
+  "nove": "31",
+  "stav": "ponecháno"
+ },
+ "35": {
+  "soubor": "P1182120",
+  "nove": "32",
+  "stav": "ponecháno"
+ },
+ "36": {
+  "soubor": "P1182122",
+  "nove": "33",
+  "stav": "ponecháno"
+ },
+ "37": {
+  "soubor": "P1182127",
+  "nove": "34",
+  "stav": "ponecháno"
+ },
+ "38": {
+  "soubor": "P1182132",
+  "nove": "35",
+  "stav": "ponecháno"
+ },
+ "39": {
+  "soubor": "P1182138",
+  "nove": "36",
+  "stav": "ponecháno"
+ },
+ "40": {
+  "soubor": "P1182143",
+  "nove": "37",
+  "stav": "ponecháno"
+ },
+ "41": {
+  "soubor": "P1182148",
+  "nove": "38",
+  "stav": "ponecháno"
+ },
+ "42": {
+  "soubor": "P1182153",
+  "nove": "39",
+  "stav": "ponecháno"
+ },
+ "43": {
+  "soubor": "P1182158",
+  "nove": "40",
+  "stav": "ponecháno"
+ },
+ "44": {
+  "soubor": "P1182162",
+  "nove": "41",
+  "stav": "ponecháno"
+ },
+ "45": {
+  "soubor": "P1182167",
+  "nove": "42",
+  "stav": "ponecháno"
+ },
+ "46": {
+  "soubor": "P1182172",
+  "nove": "43",
+  "stav": "ponecháno"
+ },
+ "47": {
+  "soubor": "P1182178",
+  "nove": "44",
+  "stav": "ponecháno"
+ },
+ "48": {
+  "soubor": "P1182182",
+  "nove": "45",
+  "stav": "ponecháno"
+ },
+ "49": {
+  "soubor": "P1182187",
+  "nove": "46",
+  "stav": "ponecháno"
+ },
+ "50": {
+  "soubor": "P1182192",
+  "nove": "47",
+  "stav": "ponecháno"
+ },
+ "51": {
+  "soubor": "P1182197",
+  "nove": "48",
+  "stav": "ponecháno"
+ },
+ "52": {
+  "soubor": "P1182202",
+  "nove": "49",
+  "stav": "ponecháno"
+ },
+ "53": {
+  "soubor": "P1182207",
+  "nove": null,
+  "stav": "vyřazeno"
+ },
+ "54": {
+  "soubor": "P1182215",
+  "nove": "50",
+  "stav": "ponecháno"
+ },
+ "55": {
+  "soubor": "P1182218",
+  "nove": "51",
+  "stav": "ponecháno"
+ },
+ "56": {
+  "soubor": "P1182223",
+  "nove": "52",
+  "stav": "ponecháno"
+ },
+ "57": {
+  "soubor": "P1182229",
+  "nove": "53",
+  "stav": "ponecháno"
+ },
+ "58": {
+  "soubor": "P1182232",
+  "nove": "54",
+  "stav": "ponecháno"
+ },
+ "59": {
+  "soubor": "P1182237",
+  "nove": "55",
+  "stav": "ponecháno"
+ },
+ "60": {
+  "soubor": "P1182242",
+  "nove": "56",
+  "stav": "ponecháno"
+ },
+ "61": {
+  "soubor": "P1182247",
+  "nove": "57",
+  "stav": "ponecháno"
+ },
+ "62": {
+  "soubor": "P1182252",
+  "nove": "58",
+  "stav": "ponecháno"
+ },
+ "63": {
+  "soubor": "P1182257",
+  "nove": "59",
+  "stav": "ponecháno"
+ },
+ "64": {
+  "soubor": "P1182262",
+  "nove": "60",
+  "stav": "ponecháno"
+ },
+ "65": {
+  "soubor": "P1182268",
+  "nove": "61",
+  "stav": "ponecháno"
+ },
+ "66": {
+  "soubor": "P1182272",
+  "nove": "62",
+  "stav": "ponecháno"
+ },
+ "67": {
+  "soubor": "P1182283",
+  "nove": "63",
+  "stav": "ponecháno"
+ },
+ "68": {
+  "soubor": "P1182287",
+  "nove": "64",
+  "stav": "ponecháno"
+ },
+ "69": {
+  "soubor": "P1182292",
+  "nove": "65",
+  "stav": "ponecháno"
+ },
+ "70": {
+  "soubor": "P1182297",
+  "nove": "66",
+  "stav": "ponecháno"
+ },
+ "71": {
+  "soubor": "P1182305",
+  "nove": "67",
+  "stav": "ponecháno"
+ },
+ "72": {
+  "soubor": "P1182307",
+  "nove": "68",
+  "stav": "ponecháno"
+ },
+ "73": {
+  "soubor": "P1182312",
+  "nove": "69",
+  "stav": "ponecháno"
+ },
+ "74": {
+  "soubor": "P1182318",
+  "nove": "70",
+  "stav": "ponecháno"
+ },
+ "75": {
+  "soubor": "P1182323",
+  "nove": "71",
+  "stav": "ponecháno"
+ }
+}
