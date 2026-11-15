@@ -317,12 +317,6 @@
    [
     2.455,
     6.069,
-    2.701,
-    6.069
-   ],
-   [
-    3.701,
-    6.069,
     3.757,
     6.069
    ],
@@ -532,17 +526,6 @@
    ],
    "title": "Balkon",
    "text": "Balkon asi 4,5 m² (3,0 × 1,5 m) z pokoje.",
-   "kind": "info"
-  },
-  {
-   "id": "hs-chodba",
-   "position": [
-    2.469,
-    1.5,
-    6.953
-   ],
-   "title": "Společná chodba",
-   "text": "Model podle půdorysu, bez fotek. Dál po chodbě jsou podle výkresu další byty a schodiště, které 3D nemá.",
    "kind": "info"
   }
  ],
@@ -767,7 +750,8 @@
     "floor": "tiles",
     "common": true,
     "ceilingHeight": 2.75,
-    "lightId": "sw-chodba-spolecna"
+    "lightId": "sw-chodba-spolecna",
+    "sealed": true
    }
   ],
   "walls": [
@@ -1013,11 +997,9 @@
       "sill": 0,
       "height": 2.1,
       "kind": "door",
-      "id": "dv-vstup",
-      "hinge": "b",
-      "swing": -1,
       "flush": true,
-      "open": true
+      "label": "Vstupní dveře bytu",
+      "note": "Vstupní dveře bytu – prohlídka pokračuje uvnitř bytu."
      }
     ]
    },
@@ -1410,8 +1392,8 @@
      "id": "obyvak-lampa",
      "kind": "floorLamp",
      "roomId": "obyvak",
-     "x": 9.55,
-     "z": 3.55,
+     "x": 7.5,
+     "z": 4.12,
      "facing": "N",
      "w": 0.34,
      "d": 0.34,
@@ -1466,7 +1448,7 @@
       "backsplash"
      ],
      "sinkAt": -0.55,
-     "hobAt": 0.55
+     "hobAt": 0.65
     },
     {
      "id": "obyvak-stul",
@@ -1559,9 +1541,9 @@
      "kind": "wardrobe",
      "roomId": "loznice",
      "x": 3.67,
-     "z": 1.5,
+     "z": 1.95,
      "facing": "W",
-     "w": 2.2,
+     "w": 1.2,
      "d": 0.6,
      "h": 2.3,
      "color": 15724008,
@@ -1595,7 +1577,7 @@
      "id": "pokoj-postel",
      "kind": "bed",
      "roomId": "pokoj",
-     "x": 6.45,
+     "x": 6.62,
      "z": 2.85,
      "facing": "N",
      "w": 0.92,
@@ -1607,10 +1589,10 @@
      "id": "pokoj-stul",
      "kind": "diningTable",
      "roomId": "pokoj",
-     "x": 6.6,
+     "x": 6.77,
      "z": 0.7,
      "facing": "S",
-     "w": 0.9,
+     "w": 0.6,
      "d": 0.5,
      "h": 0.75,
      "color": 13215612,
@@ -1620,7 +1602,7 @@
      "id": "pokoj-zidle",
      "kind": "deskChair",
      "roomId": "pokoj",
-     "x": 6.6,
+     "x": 6.77,
      "z": 1.22,
      "facing": "N",
      "w": 0.46,
@@ -1631,11 +1613,11 @@
      "id": "hala-skrin",
      "kind": "wardrobe",
      "roomId": "hala",
-     "x": 6.1,
-     "z": 5.64,
+     "x": 6.18,
+     "z": 5.725,
      "facing": "N",
-     "w": 1.8,
-     "d": 0.6,
+     "w": 1.7,
+     "d": 0.45,
      "h": 2.3,
      "color": 15724008,
      "variant": "plain"
@@ -1645,7 +1627,7 @@
      "kind": "diningTable",
      "roomId": "balkon",
      "x": 5.57,
-     "z": -0.8,
+     "z": -1.25,
      "facing": "S",
      "w": 0.6,
      "d": 0.6,
@@ -1659,7 +1641,7 @@
      "kind": "chair",
      "roomId": "balkon",
      "x": 4.98,
-     "z": -0.8,
+     "z": -1.25,
      "facing": "E",
      "w": 0.42,
      "d": 0.42,
@@ -1671,7 +1653,7 @@
      "kind": "chair",
      "roomId": "balkon",
      "x": 6.16,
-     "z": -0.8,
+     "z": -1.25,
      "facing": "W",
      "w": 0.42,
      "d": 0.42,
@@ -1683,26 +1665,27 @@
      "kind": "curtain",
      "roomId": "obyvak",
      "x": 10.746,
-     "z": 4.86,
+     "z": 2.508,
      "facing": "W",
-     "w": 2,
+     "w": 2.41,
      "d": 0.06,
-     "variant": "left",
-     "h": 2.5,
-     "color": 15394006
+     "h": 2.36,
+     "color": 15394006,
+     "panelW": 0.4
     },
     {
      "id": "obyvak-zavesy-2",
      "kind": "curtain",
      "roomId": "obyvak",
      "x": 10.746,
-     "z": 6.215,
+     "z": 5.662,
      "facing": "W",
-     "w": 1.107,
+     "w": 1.16,
      "d": 0.06,
-     "variant": "left",
-     "h": 2.5,
-     "color": 15394006
+     "variant": "right",
+     "h": 2.36,
+     "color": 15394006,
+     "panelW": 0.22
     },
     {
      "id": "obyvak-obraz-1",
@@ -1774,7 +1757,7 @@
      "id": "obyvak-vaza-linka",
      "kind": "model",
      "roomId": "obyvak",
-     "x": 7.68,
+     "x": 7.42,
      "z": 6.62,
      "facing": "N",
      "w": 0.16,
@@ -1826,7 +1809,7 @@
      "kind": "model",
      "roomId": "obyvak",
      "x": 10.55,
-     "z": 6.45,
+     "z": 4.4,
      "facing": "W",
      "w": 0.4,
      "d": 0.4,
@@ -1881,7 +1864,7 @@
      "w": 1,
      "d": 0.03,
      "h": 0.7,
-     "y": 1.62,
+     "y": 1.715,
      "color": 13215612,
      "image": "zarizeni/obrazy/obraz-loznice.jpg"
     },
@@ -1914,22 +1897,22 @@
      "id": "loznice-zavesy",
      "kind": "curtain",
      "roomId": "loznice",
-     "x": 2.62,
+     "x": 1.914,
      "z": 0.446,
      "facing": "S",
-     "w": 1.413,
+     "w": 2.41,
      "d": 0.06,
-     "variant": "left",
-     "h": 2.5,
-     "color": 15394006
+     "h": 2.36,
+     "color": 15394006,
+     "panelW": 0.45
     },
     {
      "id": "loznice-police",
      "kind": "shelf",
      "roomId": "loznice",
-     "x": 0.8,
-     "z": 0.506,
-     "facing": "S",
+     "x": 0.283,
+     "z": 0.86,
+     "facing": "E",
      "w": 0.7,
      "d": 0.2,
      "variant": "books",
@@ -1965,14 +1948,15 @@
      "id": "pokoj-zavesy",
      "kind": "curtain",
      "roomId": "pokoj",
-     "x": 5.364,
+     "x": 5.375,
      "z": 0.446,
      "facing": "S",
-     "w": 1.289,
+     "w": 1.21,
      "d": 0.06,
      "variant": "left",
-     "h": 2.5,
-     "color": 15394006
+     "h": 2.36,
+     "color": 15394006,
+     "panelW": 0.22
     },
     {
      "id": "pokoj-police",
@@ -2073,6 +2057,9 @@
     }
    ]
   }
+ },
+ "backdrop": {
+  "url": "vyhled/vyhled.json"
  },
  "listing": {
   "headline": "Typový byt 3+kk · 3. NP",
